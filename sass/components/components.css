@@ -1,0 +1,45 @@
+/* Components (sass/components/_components.scss)
+========================================================================== */
+/* Big degraded button */
+.big-btn {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.3rem;
+  background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 10%, #ff79da 100%);
+  -webkit-box-shadow: 0rem 0rem 1rem #bababa;
+          box-shadow: 0rem 0rem 1rem #bababa;
+  padding: 2.5rem 3.4rem;
+  border-radius: 5rem;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Homepage Nav buttons */
+.nav-btn {
+  background-color: #f6f6f6;
+  padding: 4rem 0rem;
+  margin: 2rem 0rem 1rem 5rem;
+  width: 48.7rem;
+  border: none;
+  border-radius: 2.8rem;
+  -webkit-box-shadow: 0px 2px 20px #e0e0e0;
+          box-shadow: 0px 2px 20px #e0e0e0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+/* Homepage Section 2 Cards */
+.cards {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=components.css.map */

@@ -1,0 +1,48 @@
+/* Header (sass/layout/_homepage.scss)
+========================================================================== */
+
+.header {
+    @include heading-config;
+
+    &__logo {
+        padding: 0rem 2rem;
+    }
+}
+
+/* Footer (sass/layout/_homepage.scss)
+========================================================================== */
+
+
+.footer {
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    padding-left: 3.2rem;
+    
+    & h6 {
+        margin: 3rem 0rem 2.8rem 0rem;
+    }
+
+    & ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        
+        & a {
+            display: flex;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: $medium;
+
+            & i {
+                width: 4rem;
+                margin-bottom: 1.4rem;
+            }
+
+            & p {
+                margin-bottom: 1.4rem;
+            }
+        }
+    }
+}

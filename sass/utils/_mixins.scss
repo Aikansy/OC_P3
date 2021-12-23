@@ -1,0 +1,50 @@
+// Mixins
+// ==========================================================================
+
+
+// Header
+
+@mixin heading-config {
+    box-shadow: $darker;
+    height: 9.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    position: relative;
+}
+
+// Fonts colors, weights, sizes, ...
+
+@mixin standard($color: #000, $weigth: $bold, $size: $psize) {
+    color: $color;
+    font-weight: $weigth;
+    font-size: $size;
+}
+
+// Nav buttons properties
+
+@mixin nbr { // Buttons section 2 numbers
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: $button-color;
+    border-radius: 50%;
+    position: relative;
+    left: -1.6rem;
+    top: -0.4rem;
+}
+
+@mixin fas-icon {  // Buttons section 2 icons
+    color: $shadow-color;
+    font-size: 2.7rem;
+    height: 100%;
+    width: 5.7rem;
+}
+
+@mixin txt-btn { // Buttons section 2 txt
+    margin-left: 2rem;
+}
