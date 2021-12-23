@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="ohmyfood" content="Réservez le menu qui vous convient. Découvrez des restaurants d'exceptions séléctionnés par nos soins">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>ohmyfood - Commandez votre repas en ligne</title>
+
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/f4914631ba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Header Logo -->
+        <a class="header__logo" href="index.html">
+            <h1>ohmyfood</h1>
+        </a>
+    </header>
+    <!-- Section 1: Location & explore -->
+    <section class="section1">
+        <!-- Location -->
+        <form class="form" method="post" action="#">
+            <label class="form__label" for="search">
+                <i class="fas fa-map-marker-alt"></i>
+            </label>
+            <input class="form__input" type="search" name="city" id="search" placeholder="Paris, Belleville">
+        </form>
+        <!-- Explore -->
+        <article class="explore">
+            <h3 class="explore__title">Réservez le menu qui<br>vous convient</h3>
+            <p class="explore__txt">Découvrez des restaurants d'exception,<br>séléctionnés par nos soins.</p>
+            <button class="big-btn explore__btn" type="button" disabled>
+                <p>Explorer nos restaurants</p>
+            </button>
+        </article>
+    </section>
+    <!-- Nav menu -->
+    <nav class="nav">
+        <!-- Nav title -->
+        <h3 class="nav__title">Fonctionnement</h3>
+        <ul class="nav__list">
+            <!-- Btn 1 -->
+            <li>
+                <button class="nav-btn" type="button" disabled>
+                    <p class="nav-btn__nbr">1</p>
+                    <i class="nav-btn__icon fas fa-mobile-alt"></i>
+                    <p class="nav-btn__txt">Choissez un restaurant</p>
+                </button>
+            </li>
+            <!-- Btn 2 -->
+            <li>
+                <button class="nav-btn" type="button" disabled>
+                    <p class="nav-btn__nbr">2</p>
+                    <i class="nav-btn__icon fas fa-list-ul"></i>
+                    <p class="nav-btn__txt">Composez votre menu</p>
+                </button>
+            </li>
+            <!-- Btn 3 -->
+            <li>
+                <button class="nav-btn" type="button" disabled>
+                    <p class="nav-btn__nbr">3</p>
+                    <i class="nav-btn__icon fas fa-store"></i>
+                    <p class="nav-btn__txt">Dégustez au restaurant</p>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <!-- Section 2 Restaurants-->
+    <section class="section2">
+        <!-- Section 2 title -->
+        <h3 class="section2__title">Restaurants</h3>
+        <!-- Cards container -->
+        <article class="section2__deck">
+            <!-- Card 1: La palette du goût -->
+            <a class="cards" href="#">
+                <figure class="cards__figure">
+                    <div class="cards__figure__image">
+                        <img src="./assets/restaurants/palettedugout.webp" alt="La palette du goût" class="cover">
+                    </div>
+                    <figcaption class="cards__figure__body">
+                        <div>
+                            <h4>La palette du goût</h4>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <button>
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </figcaption>
+                </figure>
+            </a>
+            <!-- Card 2: La note enchantée -->
+            <a class="cards" href="#">
+                <figure class="cards__figure">
+                    <div class="cards__figure__image">
+                        <img src="./assets/restaurants/noteenchantee.webp" alt="La note enchantée" class="cover">
+                    </div>
+                    <figcaption class="cards__figure__body">
+                        <div>
+                            <h4>La note enchantée</h4>
+                            <p>Charonne</p>
+                        </div>
+                        <button>
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </figcaption>
+                </figure>
+            </a>
+            <!-- Card 3: À la française -->
+            <a class="cards" href="#">
+                <figure class="cards__figure">
+                    <div class="cards__figure__image">
+                        <img src="./assets/restaurants/lafrancaise.webp" alt="À la française" class="cover">
+                    </div>
+                    <figcaption class="cards__figure__body">
+                        <div>
+                            <h4>À la française</h4>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <button>
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </figcaption>
+                </figure>
+            </a>
+            <!-- Card 4: Le délice des sens -->
+            <a class="cards" href="#">
+                <figure class="cards__figure">
+                    <div class="cards__figure__image">
+                        <img src="./assets/restaurants/delicedessens.webp" alt="Le délice des sens" class="cover">
+                    </div>
+                    <figcaption class="cards__figure__body">
+                        <div>
+                            <h4>Le délice des sens</h4>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <button>
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </figcaption>
+                </figure>
+            </a>
+        </article>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <h6>ohmyfood</h6>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fas fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-hands-helping"></i>
+                    <p>Devenir partenaire</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>Mentions légales</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>Contact</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

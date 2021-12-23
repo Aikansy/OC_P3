@@ -1,0 +1,39 @@
+// Variables
+// ==========================================================================
+
+
+// Fonts
+
+$logofont: 'Shrikhand','sans-serif';
+$mainfont: 'Roboto', 'sans-serif';
+
+// Font-size
+
+$psize: 2.3rem;
+$h1size: 4.2rem; // Logo
+$h3size: 3.7rem; // Section titles
+$h4size: 2.6rem; // Car titles
+$h6size: 2.8rem; // Footer logo
+
+// Font-weight (Roboto)
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$bolder: 900;
+
+// Colors
+
+$primary-bgcolor: #f6f6f6;
+$secondary-bgcolor: #eaeaea;
+$degraded-color: #fff;
+$degraded-bgcolor: linear-gradient(355deg, #4a4a9e 0%, #9356dc 10%, #ff79da 100%);
+$button-color: #9356dc;
+$shadow-color: #717171;
+
+// Box-shadow
+
+$darker: 0rem 0rem 1rem #bababa;
+$lighter: 0px 2px 20px rgb(224, 224, 224);

@@ -1,0 +1,59 @@
+// Font Shrikhand
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+// Font Roboto
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Common (sass/base/_base.scss)
+========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* html font-size = 62.5% = 10px */
+}
+
+*, ::before, ::after { /* box-sizing applied to all elements */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+h1 { /* Logo properties */
+    font-family: $logofont;
+    font-size: $h1size;
+}
+
+h2 { /* Restaurant titles properties */
+    font-family: $logofont;
+}
+
+h3 { /* Section titles properties */
+    font-family: $mainfont;
+    font-size: $h3size;
+    font-weight: $bold;
+    letter-spacing: -0.08rem;
+}
+
+h4 { /* Card titles properties */
+    font-family: $mainfont;
+    font-size: $h4size;
+    font-weight: $bolder;
+}
+
+h6 { /* Footer logo */
+    font-family: $logofont;
+    color: #fff;
+    font-size: $h6size;
+    font-weight: 400;
+}
+
+p {
+    font-family: $mainfont;
+}
