@@ -9,6 +9,18 @@ html {
   /* html font-size = 62.5% = 10px */
 }
 
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  /* Tablet mode */
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (min-width: 993px) {
+  /* Desktop mode */
+  html {
+    font-size: 40%;
+  }
+}
 *, ::before, ::after {
   /* box-sizing applied to all elements */
   box-sizing: border-box;
@@ -68,10 +80,9 @@ p {
   font-size: 2.3rem;
   background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 10%, #ff79da 100%);
   box-shadow: 0rem 0rem 1rem #bababa;
-  padding: 2.5rem 3.4rem;
+  padding: 2.5rem 3.5rem;
   border-radius: 5rem;
   border: none;
-  position: relative;
   cursor: pointer;
 }
 
@@ -79,18 +90,27 @@ p {
 .nav-btn {
   background-color: #f6f6f6;
   padding: 4rem 0rem;
-  margin: 2rem 0rem 1rem 0rem;
-  width: 98%;
+  margin: 2rem 0rem 1.2rem 1.5rem;
+  width: 98.8%;
   border: none;
   border-radius: 2.8rem;
   box-shadow: 0px 2px 20px #e0e0e0;
   cursor: pointer;
   display: flex;
-  justify-content: left;
-  position: relative;
-  right: -0.9rem;
 }
 
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  /* Tablet mode */
+  .nav-btn {
+    width: 95%;
+  }
+}
+@media screen and (min-width: 993px) {
+  /* Desktop mode */
+  .nav-btn {
+    width: 95%;
+  }
+}
 /* Homepage Section 2 Cards */
 .cards {
   display: flex;
@@ -143,6 +163,12 @@ p {
   border: none;
 }
 
+@media screen and (min-width: 993px) {
+  /* Desktop mode */
+  .cards {
+    width: 49.4%;
+  }
+}
 /* Header (sass/layout/_homepage.scss)
 ========================================================================== */
 .header {
@@ -189,6 +215,16 @@ p {
   margin-bottom: 1.4rem;
 }
 
+@media screen and (min-width: 769px) {
+  /* Tablet mode */
+  .footer {
+    align-items: center;
+    padding-left: 0rem;
+  }
+  .footer ul {
+    align-items: center;
+  }
+}
 /* Section 1: Location & Explore (sass/pages/_homepage_independantblocks.scss)
 ========================================================================== */
 .section1 {
@@ -197,7 +233,11 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 50.6rem;
+}
+.section1 .header-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 /* Location search input */
@@ -234,15 +274,14 @@ p {
 .explore {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 43.1rem;
+  height: 43rem;
   width: 100%;
+  padding: 4.8rem 0rem 8.7rem 0rem;
 }
 .explore__title {
   text-align: center;
-  position: relative;
-  top: -4.8rem;
   width: 70%;
 }
 .explore__txt {
@@ -250,25 +289,23 @@ p {
   font-weight: 300;
   font-size: 2.55rem;
   text-align: center;
-  position: relative;
-  top: -3rem;
-}
-.explore__btn {
-  top: 1.6rem;
+  width: 80%;
+  margin-bottom: 2rem;
 }
 
 /* Nav menu (sass/pages/_homepage_independantblocks.scss)
 ========================================================================== */
 .nav {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 7rem;
-  height: 59.1rem;
+  padding-top: 6.8rem;
+  height: 66rem;
   width: 100%;
 }
 .nav__title {
-  margin-bottom: 2rem;
+  margin-bottom: 2.1rem;
   width: 90%;
 }
 .nav__list {
@@ -278,6 +315,47 @@ p {
   list-style-type: none;
 }
 
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  /* Tablet mode */
+  .section1 .header-menu {
+    flex-direction: row;
+  }
+  .section1 .header-menu .explore {
+    width: 50%;
+    justify-content: unset;
+    background-color: #fff;
+    height: 66rem;
+    padding: 6.9rem 0rem 15rem 0rem;
+  }
+  .section1 .header-menu .explore__title {
+    margin-bottom: 10rem;
+  }
+  .section1 .header-menu .nav {
+    width: 50%;
+  }
+  .section1 .header-menu .nav__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 993px) {
+  /* Desktop mode */
+  .section1 .header-menu {
+    flex-direction: row;
+  }
+  .section1 .header-menu .explore {
+    width: 50%;
+    justify-content: space-evenly;
+    background-color: #fff;
+    height: 66rem;
+    padding: 7rem 0rem 15rem 0rem;
+  }
+  .section1 .header-menu .nav {
+    width: 50%;
+  }
+  .section1 .header-menu .nav__title {
+    text-align: center;
+  }
+}
 /* List nav buttons */
 .nav-btn {
   color: #000;
@@ -300,7 +378,6 @@ p {
 .nav-btn__icon {
   color: #717171;
   font-size: 2.7rem;
-  height: 100%;
   width: 5.7rem;
 }
 .nav-btn__txt {
@@ -325,6 +402,18 @@ p {
   flex-direction: column;
   align-items: center;
   width: 90%;
+}
+
+@media screen and (min-width: 993px) {
+  /* Desktop mode */
+  .section2 {
+    height: 109rem;
+  }
+  .section2__deck {
+    flex-direction: unset;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

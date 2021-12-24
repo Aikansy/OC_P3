@@ -14,6 +14,20 @@ html {
     font-size: 62.5%; /* html font-size = 62.5% = 10px */
 }
 
+@media screen and (min-width: 769px) and (max-width: 992px) { /* Tablet mode */
+
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (min-width: 993px) { /* Desktop mode */
+
+    html {
+        font-size: 40%;
+    }
+}
+
 *, ::before, ::after { /* box-sizing applied to all elements */
     box-sizing: border-box;
     margin: 0;

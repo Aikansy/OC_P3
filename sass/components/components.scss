@@ -5,12 +5,11 @@
 
 .big-btn {
     @include standard($degraded-color, 500, $psize);
-    background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 10%, #ff79da 100%);
+    background: $degraded-bgcolor;
     box-shadow: $darker;
-    padding: 2.5rem 3.4rem;
+    padding: 2.5rem 3.5rem;
     border-radius: 5rem;
     border: none;
-    position: relative;
     cursor: pointer;
 }
 
@@ -18,16 +17,27 @@
 .nav-btn {
     background-color: #f6f6f6;
     padding: 4rem 0rem;
-    margin: 2rem 0rem 1rem 0rem;
-    width: 98%;
+    margin: 2rem 0rem 1.2rem 1.5rem;
+    width: 98.8%;
     border: none;
     border-radius: 2.8rem;
     box-shadow: $lighter;
     cursor: pointer;
     display: flex;
-    justify-content: left;
-    position: relative;
-    right: -0.9rem;
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) { /* Tablet mode */
+
+    .nav-btn {
+        width: 95%;
+    }    
+}
+
+@media screen and (min-width: 993px) { /* Desktop mode */
+    
+    .nav-btn {
+        width: 95%;
+    }    
 }
 
 /* Homepage Section 2 Cards */
@@ -70,7 +80,6 @@
                 flex-direction: column;
                 justify-content: center;
 
-
                 & h4 {
                 margin: 0.2rem 0rem 0.2rem 2rem;
                 }
@@ -90,5 +99,12 @@
                 
             }
         }
+    }
+}
+
+@media screen and (min-width: 993px) { /* Desktop mode */
+
+    .cards {
+        width: 49.4%;
     }
 }
