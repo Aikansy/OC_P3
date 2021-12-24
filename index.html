@@ -27,46 +27,49 @@
             </label>
             <input class="form__input" type="search" name="city" id="search" placeholder="Paris, Belleville">
         </form>
-        <!-- Explore -->
-        <article class="explore">
-            <h3 class="explore__title">Réservez le menu qui<br>vous convient</h3>
-            <p class="explore__txt">Découvrez des restaurants d'exception,<br>séléctionnés par nos soins.</p>
-            <button class="big-btn explore__btn" type="button" disabled>
-                <p>Explorer nos restaurants</p>
-            </button>
-        </article>
+        <div class="header-menu">
+            <!-- Explore -->
+            <article class="explore">
+                <h3 class="explore__title">Réservez le menu qui vous convient</h3>
+                <p class="explore__txt">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <button class="big-btn explore__btn" type="button" disabled>
+                    <p>Explorer nos restaurants</p>
+                    <div class="big-btn__bg"></div>
+                </button>
+            </article>
+            <!-- Nav menu -->
+            <nav class="nav">
+                <!-- Nav title -->
+                <h3 class="nav__title">Fonctionnement</h3>
+                <ul class="nav__list">
+                    <!-- Btn 1 -->
+                    <li>
+                        <button class="nav-btn" type="button" disabled>
+                            <p class="nav-btn__nbr">1</p>
+                            <i class="nav-btn__icon fas fa-mobile-alt"></i>
+                            <p class="nav-btn__txt">Choissez un restaurant</p>
+                        </button>
+                    </li>
+                    <!-- Btn 2 -->
+                    <li>
+                        <button class="nav-btn" type="button" disabled>
+                            <p class="nav-btn__nbr">2</p>
+                            <i class="nav-btn__icon fas fa-list-ul"></i>
+                            <p class="nav-btn__txt">Composez votre menu</p>
+                        </button>
+                    </li>
+                    <!-- Btn 3 -->
+                    <li>
+                        <button class="nav-btn" type="button" disabled>
+                            <p class="nav-btn__nbr">3</p>
+                            <i class="nav-btn__icon fas fa-store"></i>
+                            <p class="nav-btn__txt">Dégustez au restaurant</p>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </section>
-    <!-- Nav menu -->
-    <nav class="nav">
-        <!-- Nav title -->
-        <h3 class="nav__title">Fonctionnement</h3>
-        <ul class="nav__list">
-            <!-- Btn 1 -->
-            <li>
-                <button class="nav-btn" type="button" disabled>
-                    <p class="nav-btn__nbr">1</p>
-                    <i class="nav-btn__icon fas fa-mobile-alt"></i>
-                    <p class="nav-btn__txt">Choissez un restaurant</p>
-                </button>
-            </li>
-            <!-- Btn 2 -->
-            <li>
-                <button class="nav-btn" type="button" disabled>
-                    <p class="nav-btn__nbr">2</p>
-                    <i class="nav-btn__icon fas fa-list-ul"></i>
-                    <p class="nav-btn__txt">Composez votre menu</p>
-                </button>
-            </li>
-            <!-- Btn 3 -->
-            <li>
-                <button class="nav-btn" type="button" disabled>
-                    <p class="nav-btn__nbr">3</p>
-                    <i class="nav-btn__icon fas fa-store"></i>
-                    <p class="nav-btn__txt">Dégustez au restaurant</p>
-                </button>
-            </li>
-        </ul>
-    </nav>
     <!-- Section 2 Restaurants-->
     <section class="section2">
         <!-- Section 2 title -->
@@ -165,7 +168,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="mailto:ohmyfood@oc.com">
                     <p>Contact</p>
                 </a>
             </li>
