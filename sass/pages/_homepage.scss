@@ -1,0 +1,225 @@
+/* pages/homepage.scss
+================================================================================================ */
+
+/* (Homepage) 1st section */
+
+.First-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* (Homepage/1st section) Search field */
+
+.search-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $nd-bg-clr;
+    height: 7.4rem;
+
+    &__label {
+        font-size: 2.4rem;
+        height: 100%;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
+        &--position {
+            background-color: unset;
+            padding: 1rem 0rem 1rem 0.5rem;
+            width: 21rem;
+            border: none;
+        }
+    }
+}
+
+/* (Homepage/1st section) Regroup-fields (Explore-field, Notice-field) */
+
+.regroup-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+/* (Homepage/1st section) Explore-field */
+
+.regroup-fields{
+
+    &__explore-field {
+        background-color: $st-bg-clr;
+        height: 43.1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__h3 {
+            @include h3-config;
+            margin-top: 5.8rem;
+            text-align: center;
+            width: 68%;
+        }
+
+        &__txt {
+            display: inline-block;
+            text-align: center;
+            margin-top: 2rem;
+            width: 80%;
+            color: #373737;
+            font-weight: $light;
+            text-shadow: 0rem 0.1rem 0.2rem rgb(177, 177, 177);
+        }
+
+        &__btn {
+            margin-top: 4.6rem;
+            cursor: pointer;
+        }
+    }
+}
+
+/* (Homepage/1st section) Nav-field */
+
+.regroup-fields {
+
+    &__nav-field {
+        height: 66rem;
+        display: flex;
+        flex-direction: column;
+
+        &__h3 {
+            @include h3-config;
+        }
+
+        &__btn-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 4.4rem;
+            padding-left: 3.5rem;
+            list-style-type: none;
+        }
+    }
+}
+
+/* (Homepage/1st section) Tablet mode */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    
+    .regroup-fields {
+        flex-direction: row;
+        padding-right: 1.5rem;
+
+        &__explore-field {
+            height: 66rem;
+            width: 50%;
+            background-color: unset;
+            justify-content: space-between;
+
+            &__h3 {
+                margin-top: 6.8rem;
+            }
+
+            &__btn {
+                margin-bottom: 12rem;
+            }
+        }
+
+        &__nav-field {
+            width: 50%;
+
+            &__h3 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+/* (Homepage/1st section) Desktop mode */
+
+@media screen and (min-width: 993px) {
+    
+    .regroup-fields {
+
+        &__explore-field {
+            height: 33rem;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+            &__h3 {
+                margin-top: 0rem;
+            }
+
+            &__btn {
+                margin-bottom: 0rem;
+            }
+        }
+
+        &__nav-field {
+            height: 33rem;
+            width: 100%;
+
+            &__h3 {
+                text-align: center;
+            }
+
+            &__btn-container {
+                flex-direction: row;
+                justify-content: center;
+
+                & .nav-btn {
+                    width: 46rem;
+                }
+            }
+        }
+    }
+}
+
+/* (Homepage) 2nd section */
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+    background-color: $st-bg-clr;
+    height: 184rem;
+
+    &__h3 {
+        @include h3-config;
+    }
+
+    &__deck {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 4.5rem 3rem 0rem 3rem;
+    }
+}
+
+/* (Homepage/2nd section) Desktop mode */
+
+@media screen and (min-width: 993px) {
+    
+    .second-section {
+        height: 109rem;
+
+        &__h3 {
+            text-align: center;
+        }
+
+        &__deck {
+            flex-direction: unset;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            & .card {
+                width: 45%;
+            }
+
+        }
+    }
+}

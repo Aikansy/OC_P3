@@ -29,396 +29,188 @@ html {
 }
 
 a {
-  color: #000;
   text-decoration: none;
-}
-
-h1 {
-  /* Logo properties */
-  font-family: "Shrikhand", "sans-serif";
-  font-size: 4.2rem;
-}
-
-h2 {
-  /* Restaurant titles properties */
-  font-family: "Shrikhand", "sans-serif";
-}
-
-h3 {
-  /* Section titles properties */
-  font-family: "Roboto", "sans-serif";
-  font-size: 3.7rem;
-  font-weight: 700;
-  letter-spacing: -0.08rem;
-}
-
-h4 {
-  /* Card titles properties */
-  font-family: "Roboto", "sans-serif";
-  font-size: 2.6rem;
-  font-weight: 900;
-}
-
-h6 {
-  /* Footer logo */
-  font-family: "Shrikhand", "sans-serif";
-  color: #fff;
-  font-size: 2.8rem;
-  font-weight: 400;
+  color: black;
 }
 
 p {
   font-family: "Roboto", "sans-serif";
+  font-size: 2.5rem;
 }
 
-/* Components (sass/components/_components.scss)
-========================================================================== */
-/* Big degraded button */
-.big-btn {
-  color: #fff;
-  font-weight: 500;
-  font-size: 2.3rem;
-  background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 10%, #ff79da 100%);
-  box-shadow: 0rem 0rem 1rem #bababa;
-  padding: 2.5rem 3.5rem;
-  border-radius: 5rem;
-  border: none;
-  cursor: pointer;
+h1 {
+  /* Logo title */
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 4.3rem;
 }
 
-/* Homepage Nav buttons */
-.nav-btn {
-  background-color: #f6f6f6;
-  padding: 4rem 0rem;
-  margin: 2rem 0rem 1.2rem 1.5rem;
-  width: 98.8%;
-  border: none;
-  border-radius: 2.8rem;
-  box-shadow: 0px 2px 20px #e0e0e0;
-  cursor: pointer;
-  display: flex;
+h2 {
+  /* Restaurants titles */
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 4.5rem;
 }
 
-@media screen and (min-width: 769px) and (max-width: 992px) {
-  /* Tablet mode */
-  .nav-btn {
-    width: 95%;
-  }
-}
-@media screen and (min-width: 993px) {
-  /* Desktop mode */
-  .nav-btn {
-    width: 95%;
-  }
-}
-/* Homepage Section 2 Cards */
-.cards {
-  display: flex;
-  height: 37.9rem;
-  border: none;
-  box-shadow: 0px 2px 20px #e0e0e0;
-  border-radius: 2rem;
-  margin-bottom: 2.5rem;
-}
-.cards__figure {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
-.cards__figure__image {
-  display: flex;
-  height: 70%;
-  overflow: hidden;
-  border-radius: 2rem 2rem 0rem 0rem;
-}
-.cards__figure__image .cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.cards__figure__body {
-  display: flex;
-  justify-content: space-between;
-  height: 30%;
-  overflow: hidden;
-  border-radius: 2rem;
-}
-.cards__figure__body div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.cards__figure__body div h4 {
-  margin: 0.2rem 0rem 0.2rem 2rem;
-}
-.cards__figure__body div p {
-  margin: 0.2rem 0rem 0.2rem 2rem;
-  font-size: 2.3rem;
-  font-weight: 300;
-}
-.cards__figure__body button {
-  width: 10rem;
-  font-size: 3rem;
-  background-color: #f6f6f6;
-  border: none;
+h3 {
+  /* Sections titles */
+  font-family: "Roboto", "sans-serif";
+  font-size: 3.3rem;
+  font-weight: 900;
 }
 
-@media screen and (min-width: 993px) {
-  /* Desktop mode */
-  .cards {
-    width: 49.4%;
-  }
+input::-moz-placeholder {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 0rem 0.1rem 0.1rem #b1b1b1;
 }
-/* Header (sass/layout/_homepage.scss)
-========================================================================== */
-.header {
-  box-shadow: 0rem 0rem 1rem #bababa;
-  height: 9.4rem;
+
+input:-ms-input-placeholder {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 0rem 0.1rem 0.1rem #b1b1b1;
+}
+
+input::placeholder {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 0rem 0.1rem 0.1rem #b1b1b1;
+}
+
+/* components/components.scss (common buttons)
+================================================================================================ */
+/* Header arrow button */
+.header__arrow {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1rem;
-  position: relative;
+  width: 9.4rem;
 }
-.header__logo {
-  padding: 0rem 2rem;
+.header__arrow--btn {
+  display: flex;
+  height: 9.4rem;
+  width: 9.4rem;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Footer (sass/layout/_homepage.scss)
-========================================================================== */
-.footer {
-  background-color: #353535;
-  display: flex;
-  flex-direction: column;
-  height: 30rem;
-  padding-left: 3.2rem;
-}
-.footer h6 {
-  margin: 3rem 0rem 2.8rem 0rem;
-}
-.footer ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-}
-.footer ul a {
-  display: flex;
+/* Big button */
+.btn {
+  border: none;
+  border-radius: 5rem;
+  padding: 2.6rem 3.2rem;
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 500;
+  background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 10%, #ff79da 100%);
+  box-shadow: 0rem 0.1rem 2rem #d0d0d0;
+  position: relative;
+  z-index: 1;
 }
-.footer ul a i {
+.btn:hover .btn__bg {
+  opacity: 0.8;
+}
+.btn__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(355deg, #9a9aff 0%, #c595ff 50%, #ffbaeb 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 5rem;
+  box-shadow: 0rem 0.1rem 0.8rem silver;
+}
+
+/* layout/homepage.scss
+================================================================================================ */
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  height: 9.4rem;
+  box-shadow: 0rem 0.1rem 0.8rem silver;
+  position: relative;
+}
+.header__title {
+  /* width: 73%; with header__arrow--btn on menu pages */
+  display: flex;
+  align-items: center;
+}
+
+/* Section 1 */
+.First-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* pages/homepage.scss
+================================================================================================ */
+/* Search field */
+.search-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  height: 7.4rem;
+}
+.search-field__label {
+  font-size: 2.4rem;
+  height: 100%;
   width: 4rem;
-  margin-bottom: 1.4rem;
+  display: flex;
+  align-items: center;
 }
-.footer ul a p {
-  margin-bottom: 1.4rem;
+.search-field__input {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.search-field__input--position {
+  background-color: unset;
+  padding: 1rem 0rem 1rem 0.5rem;
+  width: 21rem;
+  border: none;
+}
+
+/* Regroup-field */
+.regroup-fields {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 769px) {
-  /* Tablet mode */
-  .footer {
-    align-items: center;
-    padding-left: 0rem;
-  }
-  .footer ul {
-    align-items: center;
+  .regroup-fields {
+    flex-direction: row;
   }
 }
-/* Section 1: Location & Explore (sass/pages/_homepage_independantblocks.scss)
-========================================================================== */
-.section1 {
+/* Explore-field */
+.regroup-fields__explore-field {
   background-color: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.section1 .header-menu {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-/* Location search input */
-.form {
-  background-color: #eaeaea;
-  height: 7.5rem;
+  height: 43.1rem;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.form__label {
-  color: 700;
-  font-weight: 700;
-  font-size: 2.3rem;
-  position: relative;
-  left: -2.3rem;
-}
-.form__input {
-  color: #000;
-  font-weight: 700;
-  font-size: 2.3rem;
-  text-align: center;
-  border: none;
-  background-color: #eaeaea;
-  width: 19rem;
-  cursor: pointer;
-}
-.form__input::-moz-placeholder {
-  color: #000;
-}
-.form__input:-ms-input-placeholder {
-  color: #000;
-}
-.form__input::placeholder {
-  color: #000;
-}
-
-/* Explore article */
-.explore {
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  height: 43rem;
-  width: 100%;
-  padding: 4.8rem 0rem 8.7rem 0rem;
 }
-.explore__title {
+.regroup-fields__explore-field--h3 {
+  display: inline-block;
   text-align: center;
-  width: 70%;
+  margin: 5.8rem 0rem 0rem 0rem;
+  width: 68%;
 }
-.explore__txt {
-  color: #717171;
-  font-weight: 300;
-  font-size: 2.55rem;
+.regroup-fields__explore-field--txt {
+  display: inline-block;
   text-align: center;
+  margin: 2.6rem 0rem 0rem 0rem;
   width: 80%;
-  margin-bottom: 2rem;
+  color: #373737;
+  font-weight: 300;
+  text-shadow: 0rem 0.1rem 0.2rem #b1b1b1;
 }
-
-/* Nav menu (sass/pages/_homepage_independantblocks.scss)
-========================================================================== */
-.nav {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 6.8rem;
-  height: 66rem;
-  width: 100%;
-}
-.nav__title {
-  margin-bottom: 2.1rem;
-  width: 90%;
-}
-.nav__list {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-}
-
-@media screen and (min-width: 769px) and (max-width: 992px) {
-  /* Tablet mode */
-  .section1 .header-menu {
-    flex-direction: row;
-  }
-  .section1 .header-menu .explore {
-    width: 50%;
-    justify-content: unset;
-    background-color: #fff;
-    height: 66rem;
-    padding: 6.9rem 0rem 15rem 0rem;
-  }
-  .section1 .header-menu .explore__title {
-    margin-bottom: 10rem;
-  }
-  .section1 .header-menu .nav {
-    width: 50%;
-  }
-  .section1 .header-menu .nav__title {
-    text-align: center;
-  }
-}
-@media screen and (min-width: 993px) {
-  /* Desktop mode */
-  .section1 .header-menu {
-    flex-direction: row;
-  }
-  .section1 .header-menu .explore {
-    width: 50%;
-    justify-content: space-evenly;
-    background-color: #fff;
-    height: 66rem;
-    padding: 7rem 0rem 15rem 0rem;
-  }
-  .section1 .header-menu .nav {
-    width: 50%;
-  }
-  .section1 .header-menu .nav__title {
-    text-align: center;
-  }
-}
-/* List nav buttons */
-.nav-btn {
-  color: #000;
-  font-weight: 700;
-  font-size: 2.3rem;
-}
-.nav-btn__nbr {
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3.5rem;
-  width: 3.5rem;
-  background-color: #9356dc;
-  border-radius: 50%;
-  position: relative;
-  left: -1.6rem;
-  top: -0.4rem;
-}
-.nav-btn__icon {
-  color: #717171;
-  font-size: 2.7rem;
-  width: 5.7rem;
-}
-.nav-btn__txt {
-  margin-left: 2rem;
-}
-
-/* Section 2: Restaurant cards (sass/pages/_homepage_independantblocks.scss)
-========================================================================== */
-.section2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 184rem;
-  background-color: #f6f6f6;
-}
-.section2__title {
-  margin: 7rem 0rem 4rem 0rem;
-  width: 90%;
-}
-.section2__deck {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-}
-
-@media screen and (min-width: 993px) {
-  /* Desktop mode */
-  .section2 {
-    height: 109rem;
-  }
-  .section2__deck {
-    flex-direction: unset;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+.regroup-fields__explore-field--btn {
+  margin-top: 4.5rem;
 }/*# sourceMappingURL=main.css.map */

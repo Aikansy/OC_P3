@@ -1,7 +1,7 @@
-@import "./utils/variables";
-@import "./utils/mixins";
+@import "./utils/_variables.scss";
+@import "./utils/_mixins.scss";
 @import "./vendors/normalize.css";
-@import "./base/base";
-@import "./components/components";
-@import "./layout/homepage";
-@import "./pages/_homepage_independantblocks";
+@import "./base/_base.scss";
+@import "./components/_components.scss";
+@import "./layout/layout.scss";
+@import "./pages/_homepage.scss";
