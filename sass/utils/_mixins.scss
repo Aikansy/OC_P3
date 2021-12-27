@@ -14,3 +14,10 @@
     display: inline-block;
     margin: 6.8rem 0rem 0rem 3rem;
 }
+
+@media screen and (min-width: 993px) { /* Desktop mode */
+    
+    @mixin h3-config {
+        margin: 6.8rem 0rem 0rem 0rem;
+    }
+}

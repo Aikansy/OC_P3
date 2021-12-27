@@ -1,6 +1,9 @@
 @import "./vendors/normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@media screen and (min-width: 993px) {
+  /* Desktop mode */
+}
 /* Common (sass/base/_base.scss)
 ========================================================================== */
 html {
@@ -551,7 +554,7 @@ input[type=checkbox] {
     margin-top: 0rem;
   }
   .regroup-fields__explore-field__btn {
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
   .regroup-fields__nav-field {
     height: 33rem;
@@ -559,6 +562,7 @@ input[type=checkbox] {
   }
   .regroup-fields__nav-field__h3 {
     text-align: center;
+    margin-left: 0;
   }
   .regroup-fields__nav-field__btn-container {
     flex-direction: row;
@@ -598,6 +602,7 @@ input[type=checkbox] {
   }
   .second-section__h3 {
     text-align: center;
+    margin-left: 0;
   }
   .second-section__article {
     flex-direction: unset;
