@@ -202,31 +202,6 @@
                 height: 100%;
                 padding: 1.9rem 0rem 2.1rem 2rem;
             }
-
-            &__heart {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 3.5rem;
-                height: fit-content;
-                margin-right: 3rem;
-                cursor:pointer;
-
-                & .slider {
-                    cursor: pointer;
-                    display: flex;
-                    transition: 250ms;
-                    background-color: #fff;
-                }
-
-                & .slider:hover {
-                    background-color: #139273;
-                }
-
-                & input:checked + .slider {
-                    background-color: #9356dc;
-                }
-            }
         }
     }
     &:hover {
@@ -247,5 +222,107 @@
         z-index: -1;
         transition: opacity 250ms;
         border-radius: 2rem;
+    }
+}
+
+/* Heart hover & checked */
+
+.heart-container {
+    display: flex;
+    position: absolute;
+    bottom: 6.7rem;
+    right: 4rem;
+    z-index: 2;
+
+    & .slider {
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+
+        &__heart {
+            font-size: 3.5rem;
+        }
+
+        &__heart--hover {
+            font-size: 3.5rem;
+            background: -webkit-linear-gradient($primary-clr, $secondary-clr);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            text-shadow: $shadow-light;
+        }
+
+        &__heart--checked {
+            font-size: 3.5rem;
+            background: -webkit-linear-gradient($primary-clr, $secondary-clr);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        &:hover {
+            animation: heart-hover 1100ms;
+            animation-iteration-count: infinite;
+
+            & .slider__heart--hover {
+                opacity: 1;
+                z-index: 3;
+            }
+        }
+    }
+
+    & input:checked + .slider {
+
+        & .slider__heart--checked {
+            animation: heart-checked 1200ms;
+            animation-fill-mode: both;
+            z-index: 4;
+        }
+    }
+}
+
+@keyframes heart-hover {
+    0% {
+        transform: scale(1.4);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    65% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes heart-checked {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    15%{
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
     }
 }

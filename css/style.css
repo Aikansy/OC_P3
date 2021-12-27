@@ -264,27 +264,6 @@ input[type=checkbox] {
   height: 100%;
   padding: 1.9rem 0rem 2.1rem 2rem;
 }
-.card__figure__body__heart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3.5rem;
-  height: fit-content;
-  margin-right: 3rem;
-  cursor: pointer;
-}
-.card__figure__body__heart .slider {
-  cursor: pointer;
-  display: flex;
-  transition: 250ms;
-  background-color: #fff;
-}
-.card__figure__body__heart .slider:hover {
-  background-color: #139273;
-}
-.card__figure__body__heart input:checked + .slider {
-  background-color: #9356dc;
-}
 .card:hover .card--hover {
   opacity: 1;
 }
@@ -301,6 +280,95 @@ input[type=checkbox] {
   border-radius: 2rem;
 }
 
+/* Heart hover & checked */
+.heart-container {
+  display: flex;
+  position: absolute;
+  bottom: 6.7rem;
+  right: 4rem;
+  z-index: 2;
+}
+.heart-container .slider {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.heart-container .slider__heart {
+  font-size: 3.5rem;
+}
+.heart-container .slider__heart--hover {
+  font-size: 3.5rem;
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  text-shadow: 0rem 0.4rem 1.5rem #dfdfdf;
+}
+.heart-container .slider__heart--checked {
+  font-size: 3.5rem;
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+.heart-container .slider:hover {
+  animation: heart-hover 1100ms;
+  animation-iteration-count: infinite;
+}
+.heart-container .slider:hover .slider__heart--hover {
+  opacity: 1;
+  z-index: 3;
+}
+.heart-container input:checked + .slider .slider__heart--checked {
+  animation: heart-checked 1200ms;
+  animation-fill-mode: both;
+  z-index: 4;
+}
+
+@keyframes heart-hover {
+  0% {
+    transform: scale(1.4);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  65% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes heart-checked {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  15% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* layout/homepage.scss
 ================================================================================================ */
 /* Header */
@@ -511,11 +579,16 @@ input[type=checkbox] {
   display: inline-block;
   margin: 6.8rem 0rem 0rem 3rem;
 }
-.second-section__deck {
+.second-section__article {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 4.5rem 3rem 0rem 3rem;
+}
+.second-section__article__deck {
+  display: flex;
+  width: 100%;
+  position: relative;
 }
 
 /* (Homepage/2nd section) Desktop mode */
@@ -526,12 +599,12 @@ input[type=checkbox] {
   .second-section__h3 {
     text-align: center;
   }
-  .second-section__deck {
+  .second-section__article {
     flex-direction: unset;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  .second-section__deck .card {
+  .second-section__article__deck {
     width: 45%;
   }
 }

@@ -192,11 +192,17 @@
         @include h3-config;
     }
 
-    &__deck {
+    &__article {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 4.5rem 3rem 0rem 3rem;
+
+        &__deck {
+            display: flex;
+            width: 100%;
+            position: relative;
+        }
     }
 }
 
@@ -211,15 +217,14 @@
             text-align: center;
         }
 
-        &__deck {
+        &__article {
             flex-direction: unset;
             flex-wrap: wrap;
             justify-content: space-evenly;
 
-            & .card {
+            &__deck {
                 width: 45%;
             }
-
         }
     }
 }
