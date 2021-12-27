@@ -13,254 +13,269 @@
 </head>
 
 <body>
-    <header class="header">
-<!--    
-        <div class="header__arrow">
-            <a class="header__arrow__btn" href="#">
-                <i class="fas fa-arrow-left"></i>
-            </a>
+    <div class="loader-section">
+        <div class="loader-section__victim">
+            <i class="loader-section__victim__happy fas fa-grin"></i>
+            <i class="loader-section__victim__shocked fas fa-flushed"></i>
+            <i class="loader-section__victim__oh fas fa-surprise"></i>
+            <!-- <i class="fas fa-surprise"></i> -->
         </div>
--->
-        <!-- Main logo -->
-        <div class="header__title">
-            <a href="./index.html">
-                <h1>ohmyfood</h1>
-            </a>
+        <div class="loader-section__cookie">
+            <i class="loader-section__cookie__full fas fa-cookie"></i>
+            <i class="loader-section__cookie__bite fas fa-cookie-bite"></i>
         </div>
-    </header>
-    <!-- 1st section : Search-field, Regroup-fields (Explore-field, Nav-field) -->
-    <section class="First-section">
-        <!-- Search field -->
-        <form class="search-field" method="post" action="#">
-            <!-- Map mark -->
-            <label class="search-field__label" for="search">
-                <i class="fas fa-map-marker-alt"></i>
-            </label>
-            <!-- Input -->
-            <div class="search-field__input">
-                <input class="search-field__input--position" type="search" name="city" id="search" placeholder="Paris, Belleville">
-            </div>
-        </form>
-        <!-- Regroup-fields -->
-        <div class="regroup-fields">
-            <!-- Explore-field -->
-            <div class="regroup-fields__explore-field">
-                <!-- Title -->
-                <h3 class="regroup-fields__explore-field__h3">Réservez le menu qui vous convient</h3>
-                <!-- Description -->
-                <p class="regroup-fields__explore-field__txt">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-                <!-- Button -->
-                <button class="regroup-fields__explore-field__btn btn">
-                    Explorer nos restaurants
-                    <span class="btn__bg"></span>
-                </button>
-            </div>
-            <!-- Nav-field -->
-            <div class="regroup-fields__nav-field">
-                <!-- Title -->
-                <h3 class="regroup-fields__nav-field__h3">Fonctionnement</h3>
-                <!-- Nav container -->
-                <ul class="regroup-fields__nav-field__btn-container">
-                    <!-- Nav button -->
-                    <li>
-                        <a class="nav-btn" href="#">
-                            <!-- Nav order -->
-                            <p class="nav-btn__order">1</p>
-                            <!-- Nav icon & transition icon -->
-                            <i class="nav-btn__icon fas fa-mobile-alt">
-                                <i class="nav-btn__icon--clr fas fa-mobile-alt"></i>
-                            </i>
-                            <!-- Nav txt -->
-                            <p class="nav-btn__txt">Choissez un restaurant</p>
-                            <!-- Nav transition background -->
-                            <div class="nav-btn__bg"></div>
-                        </a>
-                    </li>
-                    <!-- Nav button -->
-                    <li>
-                        <a class="nav-btn" href="#">
-                            <!-- Nav order -->
-                            <p class="nav-btn__order">2</p>
-                            <!-- Nav icon & transition icon -->
-                            <i class="nav-btn__icon fas fa-list-ul">
-                                <i class="nav-btn__icon--clr fas fa-list-ul"></i>
-                            </i>
-                            <!-- Nav txt -->
-                            <p class="nav-btn__txt">Composez votre menu</p>
-                            <!-- Nav transition background -->
-                            <div class="nav-btn__bg"></div>
-                        </a>
-                    </li>
-                    <!-- Nav button -->
-                    <li>
-                        <a class="nav-btn" href="#">
-                            <!-- Nav order -->
-                            <p class="nav-btn__order">3</p>
-                            <!-- Nav icon & transition icon -->
-                            <i class="nav-btn__icon fas fa-store">
-                                <i class="nav-btn__icon--clr fas fa-store"></i>
-                            </i>
-                            <!-- Nav txt -->
-                            <p class="nav-btn__txt">Dégustez au restaurant</p>
-                            <!-- Nav transition background -->
-                            <div class="nav-btn__bg"></div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- 2nd section -->
-    <section class="second-section">
-        <!-- Title -->
-        <h3 class="second-section__h3">Restaurants</h3>
-        <!-- Article -->
-        <article class="second-section__article">
-            <!-- Card -->
-            <div class="second-section__article__deck">
-                <a class="card" href="#">
-                    <figure class="card__figure">
-                        <!-- Img block -->
-                        <div class="card__figure__img">
-                            <img class="card__figure__img__bg-img" src="./assets/restaurants/palettedugout.webp" alt="La palette du goût">
-                            <p class="card__figure__img__new">Nouveau</p>
-                        </div>
-                        <!-- Body block -->
-                        <figcaption class="card__figure__body">
-                            <div class="card__figure__body__txt">
-                                <h4>La palette du goût</h4>
-                                <p>Ménilmontant</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                    <div class="card--hover"></div>
+        <i class="loader-section__ghost fas fa-ghost"></i>
+    </div>
+    <div class="index">
+        <header class="header">
+    <!--    
+            <div class="header__arrow">
+                <a class="header__arrow__btn" href="#">
+                    <i class="fas fa-arrow-left"></i>
                 </a>
-                <label class="heart-container">
-                    <input type="checkbox">
-                    <span class="slider">
-                        <i class="slider__heart far fa-heart"></i>
-                        <i class="slider__heart--hover far fa-heart"></i>
-                        <i class="slider__heart--checked fas fa-heart"></i>
-                    </span>
+            </div>
+    -->
+            <!-- Main logo -->
+            <div class="header__title">
+                <a href="./index.html">
+                    <h1>ohmyfood</h1>
+                </a>
+            </div>
+        </header>
+        <!-- 1st section : Search-field, Regroup-fields (Explore-field, Nav-field) -->
+        <section class="First-section">
+            <!-- Search field -->
+            <form class="search-field" method="post" action="#">
+                <!-- Map mark -->
+                <label class="search-field__label" for="search">
+                    <i class="fas fa-map-marker-alt"></i>
                 </label>
+                <!-- Input -->
+                <div class="search-field__input">
+                    <input class="search-field__input--position" type="search" name="city" id="search" placeholder="Paris, Belleville">
+                </div>
+            </form>
+            <!-- Regroup-fields -->
+            <div class="regroup-fields">
+                <!-- Explore-field -->
+                <div class="regroup-fields__explore-field">
+                    <!-- Title -->
+                    <h3 class="regroup-fields__explore-field__h3">Réservez le menu qui vous convient</h3>
+                    <!-- Description -->
+                    <p class="regroup-fields__explore-field__txt">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+                    <!-- Button -->
+                    <button class="regroup-fields__explore-field__btn btn">
+                        Explorer nos restaurants
+                        <span class="btn__bg"></span>
+                    </button>
+                </div>
+                <!-- Nav-field -->
+                <div class="regroup-fields__nav-field">
+                    <!-- Title -->
+                    <h3 class="regroup-fields__nav-field__h3">Fonctionnement</h3>
+                    <!-- Nav container -->
+                    <ul class="regroup-fields__nav-field__btn-container">
+                        <!-- Nav button -->
+                        <li>
+                            <a class="nav-btn" href="#">
+                                <!-- Nav order -->
+                                <p class="nav-btn__order">1</p>
+                                <!-- Nav icon & transition icon -->
+                                <i class="nav-btn__icon fas fa-mobile-alt">
+                                    <i class="nav-btn__icon--clr fas fa-mobile-alt"></i>
+                                </i>
+                                <!-- Nav txt -->
+                                <p class="nav-btn__txt">Choissez un restaurant</p>
+                                <!-- Nav transition background -->
+                                <div class="nav-btn__bg"></div>
+                            </a>
+                        </li>
+                        <!-- Nav button -->
+                        <li>
+                            <a class="nav-btn" href="#">
+                                <!-- Nav order -->
+                                <p class="nav-btn__order">2</p>
+                                <!-- Nav icon & transition icon -->
+                                <i class="nav-btn__icon fas fa-list-ul">
+                                    <i class="nav-btn__icon--clr fas fa-list-ul"></i>
+                                </i>
+                                <!-- Nav txt -->
+                                <p class="nav-btn__txt">Composez votre menu</p>
+                                <!-- Nav transition background -->
+                                <div class="nav-btn__bg"></div>
+                            </a>
+                        </li>
+                        <!-- Nav button -->
+                        <li>
+                            <a class="nav-btn" href="#">
+                                <!-- Nav order -->
+                                <p class="nav-btn__order">3</p>
+                                <!-- Nav icon & transition icon -->
+                                <i class="nav-btn__icon fas fa-store">
+                                    <i class="nav-btn__icon--clr fas fa-store"></i>
+                                </i>
+                                <!-- Nav txt -->
+                                <p class="nav-btn__txt">Dégustez au restaurant</p>
+                                <!-- Nav transition background -->
+                                <div class="nav-btn__bg"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!-- Card -->
-            <div class="second-section__article__deck">
-                <a class="card" href="#">
-                    <figure class="card__figure">
-                        <!-- Img block -->
-                        <div class="card__figure__img">
-                            <img class="card__figure__img__bg-img" src="./assets/restaurants/noteenchantee.webp" alt="La note enchantée">
-                            <p class="card__figure__img__new">Nouveau</p>
-                        </div>
-                        <!-- Body block -->
-                        <figcaption class="card__figure__body">
-                            <div class="card__figure__body__txt">
-                                <h4>La note enchantée</h4>
-                                <p>Charonne</p>
+        </section>
+        <!-- 2nd section -->
+        <section class="second-section">
+            <!-- Title -->
+            <h3 class="second-section__h3">Restaurants</h3>
+            <!-- Article -->
+            <article class="second-section__article">
+                <!-- Card -->
+                <div class="second-section__article__deck">
+                    <a class="card" href="#">
+                        <figure class="card__figure">
+                            <!-- Img block -->
+                            <div class="card__figure__img">
+                                <img class="card__figure__img__bg-img" src="./assets/restaurants/palettedugout.webp" alt="La palette du goût">
+                                <p class="card__figure__img__new">Nouveau</p>
                             </div>
-                        </figcaption>
-                    </figure>
-                    <div class="card--hover"></div>
-                </a>
-                <label class="heart-container">
-                    <input type="checkbox">
-                    <span class="slider">
-                        <i class="slider__heart far fa-heart"></i>
-                        <i class="slider__heart--hover far fa-heart"></i>
-                        <i class="slider__heart--checked fas fa-heart"></i>
-                    </span>
-                </label>
-            </div>
-            <!-- Card -->
-            <div class="second-section__article__deck">
-                <a class="card" href="#">
-                    <figure class="card__figure">
-                        <!-- Img block -->
-                        <div class="card__figure__img">
-                            <img class="card__figure__img__bg-img" src="./assets/restaurants/lafrancaise.webp" alt="À la française">
-                        </div>
-                        <!-- Body block -->
-                        <figcaption class="card__figure__body">
-                            <div class="card__figure__body__txt">
-                                <h4>À la française</h4>
-                                <p>Cité Rouge</p>
+                            <!-- Body block -->
+                            <figcaption class="card__figure__body">
+                                <div class="card__figure__body__txt">
+                                    <h4>La palette du goût</h4>
+                                    <p>Ménilmontant</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <div class="card--hover"></div>
+                    </a>
+                    <label class="heart-container">
+                        <input type="checkbox">
+                        <span class="slider">
+                            <i class="slider__heart far fa-heart"></i>
+                            <i class="slider__heart--hover far fa-heart"></i>
+                            <i class="slider__heart--checked fas fa-heart"></i>
+                        </span>
+                    </label>
+                </div>
+                <!-- Card -->
+                <div class="second-section__article__deck">
+                    <a class="card" href="#">
+                        <figure class="card__figure">
+                            <!-- Img block -->
+                            <div class="card__figure__img">
+                                <img class="card__figure__img__bg-img" src="./assets/restaurants/noteenchantee.webp" alt="La note enchantée">
+                                <p class="card__figure__img__new">Nouveau</p>
                             </div>
-                        </figcaption>
-                    </figure>
-                    <div class="card--hover"></div>
-                </a>
-                <label class="heart-container">
-                    <input type="checkbox">
-                    <span class="slider">
-                        <i class="slider__heart far fa-heart"></i>
-                        <i class="slider__heart--hover far fa-heart"></i>
-                        <i class="slider__heart--checked fas fa-heart"></i>
-                    </span>
-                </label>
-            </div>
-            <!-- Card -->
-            <div class="second-section__article__deck">
-                <a class="card" href="#">
-                    <figure class="card__figure">
-                        <!-- Img block -->
-                        <div class="card__figure__img">
-                            <img class="card__figure__img__bg-img" src="./assets/restaurants/delicedessens.webp" alt="Le délice des sens">
-                        </div>
-                        <!-- Body block -->
-                        <figcaption class="card__figure__body">
-                            <div class="card__figure__body__txt">
-                                <h4>Le délice des sens</h4>
-                                <p>Folie-Méricourt</p>
+                            <!-- Body block -->
+                            <figcaption class="card__figure__body">
+                                <div class="card__figure__body__txt">
+                                    <h4>La note enchantée</h4>
+                                    <p>Charonne</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <div class="card--hover"></div>
+                    </a>
+                    <label class="heart-container">
+                        <input type="checkbox">
+                        <span class="slider">
+                            <i class="slider__heart far fa-heart"></i>
+                            <i class="slider__heart--hover far fa-heart"></i>
+                            <i class="slider__heart--checked fas fa-heart"></i>
+                        </span>
+                    </label>
+                </div>
+                <!-- Card -->
+                <div class="second-section__article__deck">
+                    <a class="card" href="#">
+                        <figure class="card__figure">
+                            <!-- Img block -->
+                            <div class="card__figure__img">
+                                <img class="card__figure__img__bg-img" src="./assets/restaurants/lafrancaise.webp" alt="À la française">
                             </div>
-                        </figcaption>
-                    </figure>
-                    <div class="card--hover"></div>
-                </a>
-                <label class="heart-container">
-                    <input type="checkbox">
-                    <span class="slider">
-                        <i class="slider__heart far fa-heart"></i>
-                        <i class="slider__heart--hover far fa-heart"></i>
-                        <i class="slider__heart--checked fas fa-heart"></i>
-                    </span>
-                </label>
-            </div>
-        </article>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <!-- Title-->
-        <h6 class="footer__h6">ohmyfood</h6>
-        <!-- Links list -->
-        <ul class="footer__ul">
-            <!-- Link -->
-            <li>
-                <a class="footer__ul__a" href="#">
-                    <i class="fas fa-utensils"></i>
-                    <p>Proposer un restaurant</p>
-                </a>
-            </li>
-            <!-- Link -->
-            <li>
-                <a class="footer__ul__a" href="#">
-                    <i class="fas fa-hands-helping"></i>
-                    <p>Devenir partenaire</p>
-                </a>
-            </li>
-            <!-- Link -->
-            <li>
-                <a class="footer__ul__a" href="#">
-                    <p>Mentions légales</p>
-                </a>
-            </li>
-            <!-- Link -->
-            <li>
-                <a class="footer__ul__a" href="mailto:ohmyfood@oc.com">
-                    <p>Contact</p>
-                </a>
-            </li>
-        </ul>
-    </footer>
+                            <!-- Body block -->
+                            <figcaption class="card__figure__body">
+                                <div class="card__figure__body__txt">
+                                    <h4>À la française</h4>
+                                    <p>Cité Rouge</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <div class="card--hover"></div>
+                    </a>
+                    <label class="heart-container">
+                        <input type="checkbox">
+                        <span class="slider">
+                            <i class="slider__heart far fa-heart"></i>
+                            <i class="slider__heart--hover far fa-heart"></i>
+                            <i class="slider__heart--checked fas fa-heart"></i>
+                        </span>
+                    </label>
+                </div>
+                <!-- Card -->
+                <div class="second-section__article__deck">
+                    <a class="card" href="#">
+                        <figure class="card__figure">
+                            <!-- Img block -->
+                            <div class="card__figure__img">
+                                <img class="card__figure__img__bg-img" src="./assets/restaurants/delicedessens.webp" alt="Le délice des sens">
+                            </div>
+                            <!-- Body block -->
+                            <figcaption class="card__figure__body">
+                                <div class="card__figure__body__txt">
+                                    <h4>Le délice des sens</h4>
+                                    <p>Folie-Méricourt</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <div class="card--hover"></div>
+                    </a>
+                    <label class="heart-container">
+                        <input type="checkbox">
+                        <span class="slider">
+                            <i class="slider__heart far fa-heart"></i>
+                            <i class="slider__heart--hover far fa-heart"></i>
+                            <i class="slider__heart--checked fas fa-heart"></i>
+                        </span>
+                    </label>
+                </div>
+            </article>
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- Title-->
+            <h6 class="footer__h6">ohmyfood</h6>
+            <!-- Links list -->
+            <ul class="footer__ul">
+                <!-- Link -->
+                <li>
+                    <a class="footer__ul__a" href="#">
+                        <i class="fas fa-utensils"></i>
+                        <p>Proposer un restaurant</p>
+                    </a>
+                </li>
+                <!-- Link -->
+                <li>
+                    <a class="footer__ul__a" href="#">
+                        <i class="fas fa-hands-helping"></i>
+                        <p>Devenir partenaire</p>
+                    </a>
+                </li>
+                <!-- Link -->
+                <li>
+                    <a class="footer__ul__a" href="#">
+                        <p>Mentions légales</p>
+                    </a>
+                </li>
+                <!-- Link -->
+                <li>
+                    <a class="footer__ul__a" href="mailto:ohmyfood@oc.com">
+                        <p>Contact</p>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>

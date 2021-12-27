@@ -247,7 +247,9 @@
             font-size: 3.5rem;
             background: -webkit-linear-gradient($primary-clr, $secondary-clr);
             -webkit-background-clip: text;
+            -moz-background-clip: txt;
             -webkit-text-fill-color: transparent;
+            -moz-text-decoration-color: transparent;
             position: absolute;
             top: 0;
             right: 0;
@@ -261,7 +263,9 @@
             font-size: 3.5rem;
             background: -webkit-linear-gradient($primary-clr, $secondary-clr);
             -webkit-background-clip: text;
+            -moz-background-clip: txt;
             -webkit-text-fill-color: transparent;
+            -moz-text-decoration-color: transparent;
             position: absolute;
             top: 0;
             right: 0;
@@ -271,6 +275,8 @@
         }
 
         &:hover {
+            -webkit-animation: heart-hover 1100ms;
+            -moz-animation: heart-hover 1100ms;
             animation: heart-hover 1100ms;
             animation-iteration-count: infinite;
 
@@ -284,6 +290,8 @@
     & input:checked + .slider {
 
         & .slider__heart--checked {
+            -webkit-animation: heart-checked 1200ms;
+            -moz-animation: heart-checked 1200ms;
             animation: heart-checked 1200ms;
             animation-fill-mode: both;
             z-index: 4;
