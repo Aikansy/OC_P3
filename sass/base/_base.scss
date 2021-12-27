@@ -17,7 +17,7 @@ html {
 @media screen and (min-width: 769px) and (max-width: 992px) { /* Tablet mode */
 
     html {
-        font-size: 55%;
+        font-size: 50%;
     }
 }
 
@@ -35,39 +35,55 @@ html {
 }
 
 a {
-    color: #000;
     text-decoration: none;
-}
-
-h1 { /* Logo properties */
-    font-family: $logofont;
-    font-size: $h1size;
-}
-
-h2 { /* Restaurant titles properties */
-    font-family: $logofont;
-}
-
-h3 { /* Section titles properties */
-    font-family: $mainfont;
-    font-size: $h3size;
-    font-weight: $bold;
-    letter-spacing: -0.08rem;
-}
-
-h4 { /* Card titles properties */
-    font-family: $mainfont;
-    font-size: $h4size;
-    font-weight: $bolder;
-}
-
-h6 { /* Footer logo */
-    font-family: $logofont;
-    color: #fff;
-    font-size: $h6size;
-    font-weight: 400;
+    color: black;
 }
 
 p {
-    font-family: $mainfont;
+    font-family: $ft-robot;
+    font-size: 2.5rem;
+}
+
+h1 { /* Logo title */
+    font-family: $ft-shrik;
+    font-size: 4.3rem;
+}
+
+h2 { /* Restaurants titles */
+    font-family: $ft-shrik;
+    font-size: 4.5rem;
+}
+
+h3 { /* Sections titles */
+    font-family: $ft-robot;
+    font-size: 3.5rem;
+    font-weight: $bolder;
+}
+
+h4 { /* Card titles */
+    font-family: $ft-robot;
+    font-size: 2.6rem;
+    font-weight: $bolder;
+}
+
+h6 { /* Footer title */
+    font-family: $ft-shrik;
+    font-size: 2.8rem;
+    font-weight: $regular;
+    color: #fff;
+}
+
+input::placeholder {
+    @include font-standard;
+    color: black;
+    opacity: 100%; /* Firefox */
+    font-family: $ft-robot; /* Firefox */
+}
+
+input[type="search"] {
+    cursor:pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
 }

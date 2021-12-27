@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="ohmyfood" content="Réservez le menu qui vous convient. Découvrez des restaurants d'exceptions séléctionnés par nos soins">
@@ -10,165 +11,252 @@
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/f4914631ba.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <!-- Header -->
     <header class="header">
-        <!-- Header Logo -->
-        <a class="header__logo" href="index.html">
-            <h1>ohmyfood</h1>
-        </a>
+<!--    
+        <div class="header__arrow">
+            <a class="header__arrow__btn" href="#">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+-->
+        <!-- Main logo -->
+        <div class="header__title">
+            <a href="./index.html">
+                <h1>ohmyfood</h1>
+            </a>
+        </div>
     </header>
-    <!-- Section 1: Location & explore -->
-    <section class="section1">
-        <!-- Location -->
-        <form class="form" method="post" action="#">
-            <label class="form__label" for="search">
+    <!-- 1st section : Search-field, Regroup-fields (Explore-field, Nav-field) -->
+    <section class="First-section">
+        <!-- Search field -->
+        <form class="search-field" method="post" action="#">
+            <!-- Map mark -->
+            <label class="search-field__label" for="search">
                 <i class="fas fa-map-marker-alt"></i>
             </label>
-            <input class="form__input" type="search" name="city" id="search" placeholder="Paris, Belleville">
+            <!-- Input -->
+            <div class="search-field__input">
+                <input class="search-field__input--position" type="search" name="city" id="search" placeholder="Paris, Belleville">
+            </div>
         </form>
-        <div class="header-menu">
-            <!-- Explore -->
-            <article class="explore">
-                <h3 class="explore__title">Réservez le menu qui vous convient</h3>
-                <p class="explore__txt">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button class="big-btn explore__btn" type="button" disabled>
-                    <p>Explorer nos restaurants</p>
-                    <div class="big-btn__bg"></div>
+        <!-- Regroup-fields -->
+        <div class="regroup-fields">
+            <!-- Explore-field -->
+            <div class="regroup-fields__explore-field">
+                <!-- Title -->
+                <h3 class="regroup-fields__explore-field__h3">Réservez le menu qui vous convient</h3>
+                <!-- Description -->
+                <p class="regroup-fields__explore-field__txt">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+                <!-- Button -->
+                <button class="regroup-fields__explore-field__btn btn">
+                    Explorer nos restaurants
+                    <span class="btn__bg"></span>
                 </button>
-            </article>
-            <!-- Nav menu -->
-            <nav class="nav">
-                <!-- Nav title -->
-                <h3 class="nav__title">Fonctionnement</h3>
-                <ul class="nav__list">
-                    <!-- Btn 1 -->
+            </div>
+            <!-- Nav-field -->
+            <div class="regroup-fields__nav-field">
+                <!-- Title -->
+                <h3 class="regroup-fields__nav-field__h3">Fonctionnement</h3>
+                <!-- Nav container -->
+                <ul class="regroup-fields__nav-field__btn-container">
+                    <!-- Nav button -->
                     <li>
-                        <button class="nav-btn" type="button" disabled>
-                            <p class="nav-btn__nbr">1</p>
-                            <i class="nav-btn__icon fas fa-mobile-alt"></i>
+                        <a class="nav-btn" href="#">
+                            <!-- Nav order -->
+                            <p class="nav-btn__order">1</p>
+                            <!-- Nav icon & transition icon -->
+                            <i class="nav-btn__icon fas fa-mobile-alt">
+                                <i class="nav-btn__icon--clr fas fa-mobile-alt"></i>
+                            </i>
+                            <!-- Nav txt -->
                             <p class="nav-btn__txt">Choissez un restaurant</p>
-                        </button>
+                            <!-- Nav transition background -->
+                            <div class="nav-btn__bg"></div>
+                        </a>
                     </li>
-                    <!-- Btn 2 -->
+                    <!-- Nav button -->
                     <li>
-                        <button class="nav-btn" type="button" disabled>
-                            <p class="nav-btn__nbr">2</p>
-                            <i class="nav-btn__icon fas fa-list-ul"></i>
+                        <a class="nav-btn" href="#">
+                            <!-- Nav order -->
+                            <p class="nav-btn__order">2</p>
+                            <!-- Nav icon & transition icon -->
+                            <i class="nav-btn__icon fas fa-list-ul">
+                                <i class="nav-btn__icon--clr fas fa-list-ul"></i>
+                            </i>
+                            <!-- Nav txt -->
                             <p class="nav-btn__txt">Composez votre menu</p>
-                        </button>
+                            <!-- Nav transition background -->
+                            <div class="nav-btn__bg"></div>
+                        </a>
                     </li>
-                    <!-- Btn 3 -->
+                    <!-- Nav button -->
                     <li>
-                        <button class="nav-btn" type="button" disabled>
-                            <p class="nav-btn__nbr">3</p>
-                            <i class="nav-btn__icon fas fa-store"></i>
+                        <a class="nav-btn" href="#">
+                            <!-- Nav order -->
+                            <p class="nav-btn__order">3</p>
+                            <!-- Nav icon & transition icon -->
+                            <i class="nav-btn__icon fas fa-store">
+                                <i class="nav-btn__icon--clr fas fa-store"></i>
+                            </i>
+                            <!-- Nav txt -->
                             <p class="nav-btn__txt">Dégustez au restaurant</p>
-                        </button>
+                            <!-- Nav transition background -->
+                            <div class="nav-btn__bg"></div>
+                        </a>
                     </li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </section>
-    <!-- Section 2 Restaurants-->
-    <section class="section2">
-        <!-- Section 2 title -->
-        <h3 class="section2__title">Restaurants</h3>
-        <!-- Cards container -->
-        <article class="section2__deck">
-            <!-- Card 1: La palette du goût -->
-            <a class="cards" href="#">
-                <figure class="cards__figure">
-                    <div class="cards__figure__image">
-                        <img src="./assets/restaurants/palettedugout.webp" alt="La palette du goût" class="cover">
-                    </div>
-                    <figcaption class="cards__figure__body">
-                        <div>
-                            <h4>La palette du goût</h4>
-                            <p>Ménilmontant</p>
+    <!-- 2nd section -->
+    <section class="second-section">
+        <!-- Title -->
+        <h3 class="second-section__h3">Restaurants</h3>
+        <!-- Article -->
+        <article class="second-section__article">
+            <!-- Card -->
+            <div class="second-section__article__deck">
+                <a class="card" href="#">
+                    <figure class="card__figure">
+                        <!-- Img block -->
+                        <div class="card__figure__img">
+                            <img class="card__figure__img__bg-img" src="./assets/restaurants/palettedugout.webp" alt="La palette du goût">
+                            <p class="card__figure__img__new">Nouveau</p>
                         </div>
-                        <button>
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </figcaption>
-                </figure>
-            </a>
-            <!-- Card 2: La note enchantée -->
-            <a class="cards" href="#">
-                <figure class="cards__figure">
-                    <div class="cards__figure__image">
-                        <img src="./assets/restaurants/noteenchantee.webp" alt="La note enchantée" class="cover">
-                    </div>
-                    <figcaption class="cards__figure__body">
-                        <div>
-                            <h4>La note enchantée</h4>
-                            <p>Charonne</p>
+                        <!-- Body block -->
+                        <figcaption class="card__figure__body">
+                            <div class="card__figure__body__txt">
+                                <h4>La palette du goût</h4>
+                                <p>Ménilmontant</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <div class="card--hover"></div>
+                </a>
+                <label class="heart-container">
+                    <input type="checkbox">
+                    <span class="slider">
+                        <i class="slider__heart far fa-heart"></i>
+                        <i class="slider__heart--hover far fa-heart"></i>
+                        <i class="slider__heart--checked fas fa-heart"></i>
+                    </span>
+                </label>
+            </div>
+            <!-- Card -->
+            <div class="second-section__article__deck">
+                <a class="card" href="#">
+                    <figure class="card__figure">
+                        <!-- Img block -->
+                        <div class="card__figure__img">
+                            <img class="card__figure__img__bg-img" src="./assets/restaurants/noteenchantee.webp" alt="La note enchantée">
+                            <p class="card__figure__img__new">Nouveau</p>
                         </div>
-                        <button>
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </figcaption>
-                </figure>
-            </a>
-            <!-- Card 3: À la française -->
-            <a class="cards" href="#">
-                <figure class="cards__figure">
-                    <div class="cards__figure__image">
-                        <img src="./assets/restaurants/lafrancaise.webp" alt="À la française" class="cover">
-                    </div>
-                    <figcaption class="cards__figure__body">
-                        <div>
-                            <h4>À la française</h4>
-                            <p>Cité Rouge</p>
+                        <!-- Body block -->
+                        <figcaption class="card__figure__body">
+                            <div class="card__figure__body__txt">
+                                <h4>La note enchantée</h4>
+                                <p>Charonne</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <div class="card--hover"></div>
+                </a>
+                <label class="heart-container">
+                    <input type="checkbox">
+                    <span class="slider">
+                        <i class="slider__heart far fa-heart"></i>
+                        <i class="slider__heart--hover far fa-heart"></i>
+                        <i class="slider__heart--checked fas fa-heart"></i>
+                    </span>
+                </label>
+            </div>
+            <!-- Card -->
+            <div class="second-section__article__deck">
+                <a class="card" href="#">
+                    <figure class="card__figure">
+                        <!-- Img block -->
+                        <div class="card__figure__img">
+                            <img class="card__figure__img__bg-img" src="./assets/restaurants/lafrancaise.webp" alt="À la française">
                         </div>
-                        <button>
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </figcaption>
-                </figure>
-            </a>
-            <!-- Card 4: Le délice des sens -->
-            <a class="cards" href="#">
-                <figure class="cards__figure">
-                    <div class="cards__figure__image">
-                        <img src="./assets/restaurants/delicedessens.webp" alt="Le délice des sens" class="cover">
-                    </div>
-                    <figcaption class="cards__figure__body">
-                        <div>
-                            <h4>Le délice des sens</h4>
-                            <p>Folie-Méricourt</p>
+                        <!-- Body block -->
+                        <figcaption class="card__figure__body">
+                            <div class="card__figure__body__txt">
+                                <h4>À la française</h4>
+                                <p>Cité Rouge</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <div class="card--hover"></div>
+                </a>
+                <label class="heart-container">
+                    <input type="checkbox">
+                    <span class="slider">
+                        <i class="slider__heart far fa-heart"></i>
+                        <i class="slider__heart--hover far fa-heart"></i>
+                        <i class="slider__heart--checked fas fa-heart"></i>
+                    </span>
+                </label>
+            </div>
+            <!-- Card -->
+            <div class="second-section__article__deck">
+                <a class="card" href="#">
+                    <figure class="card__figure">
+                        <!-- Img block -->
+                        <div class="card__figure__img">
+                            <img class="card__figure__img__bg-img" src="./assets/restaurants/delicedessens.webp" alt="Le délice des sens">
                         </div>
-                        <button>
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </figcaption>
-                </figure>
-            </a>
+                        <!-- Body block -->
+                        <figcaption class="card__figure__body">
+                            <div class="card__figure__body__txt">
+                                <h4>Le délice des sens</h4>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <div class="card--hover"></div>
+                </a>
+                <label class="heart-container">
+                    <input type="checkbox">
+                    <span class="slider">
+                        <i class="slider__heart far fa-heart"></i>
+                        <i class="slider__heart--hover far fa-heart"></i>
+                        <i class="slider__heart--checked fas fa-heart"></i>
+                    </span>
+                </label>
+            </div>
         </article>
     </section>
     <!-- Footer -->
     <footer class="footer">
-        <h6>ohmyfood</h6>
-        <ul>
+        <!-- Title-->
+        <h6 class="footer__h6">ohmyfood</h6>
+        <!-- Links list -->
+        <ul class="footer__ul">
+            <!-- Link -->
             <li>
-                <a href="#">
+                <a class="footer__ul__a" href="#">
                     <i class="fas fa-utensils"></i>
                     <p>Proposer un restaurant</p>
                 </a>
             </li>
+            <!-- Link -->
             <li>
-                <a href="#">
+                <a class="footer__ul__a" href="#">
                     <i class="fas fa-hands-helping"></i>
                     <p>Devenir partenaire</p>
                 </a>
             </li>
+            <!-- Link -->
             <li>
-                <a href="#">
+                <a class="footer__ul__a" href="#">
                     <p>Mentions légales</p>
                 </a>
             </li>
+            <!-- Link -->
             <li>
-                <a href="mailto:ohmyfood@oc.com">
+                <a class="footer__ul__a" href="mailto:ohmyfood@oc.com">
                     <p>Contact</p>
                 </a>
             </li>

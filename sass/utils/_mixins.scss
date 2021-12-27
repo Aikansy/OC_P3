@@ -1,49 +1,23 @@
 // Mixins
-// ==========================================================================
+// ================================================================================================
 
+// Fonts
 
-// Header
-
-@mixin heading-config {
-    box-shadow: $darker;
-    height: 9.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 1rem;
-    position: relative;
+@mixin font-standard {
+    font-size: 2.2rem;
+    font-weight: $bold;
 }
 
-// Fonts colors, weights, sizes, ...
+// Section titles
 
-@mixin standard($color: #000, $weigth: $bold, $size: $psize) {
-    color: $color;
-    font-weight: $weigth;
-    font-size: $size;
+@mixin h3-config {
+    display: inline-block;
+    margin: 6.8rem 0rem 0rem 3rem;
 }
 
-// Nav buttons properties
-
-@mixin nbr { // Buttons section 2 numbers
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3.5rem;
-    width: 3.5rem;
-    background-color: $button-color;
-    border-radius: 50%;
-    position: relative;
-    left: -1.6rem;
-    top: -0.4rem;
-}
-
-@mixin fas-icon {  // Buttons section 2 icons
-    color: $shadow-color;
-    font-size: 2.7rem;
-    width: 5.7rem;
-}
-
-@mixin txt-btn { // Buttons section 2 txt
-    margin-left: 2rem;
+@media screen and (min-width: 993px) { /* Desktop mode */
+    
+    @mixin h3-config {
+        margin: 6.8rem 0rem 0rem 0rem;
+    }
 }
