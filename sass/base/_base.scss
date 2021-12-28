@@ -51,7 +51,8 @@ h1 { /* Logo title */
 
 h2 { /* Restaurants titles */
     font-family: $ft-shrik;
-    font-size: 4.5rem;
+    font-size: 3.6rem;
+    letter-spacing: 0.1rem;
 }
 
 h3 { /* Sections titles */
@@ -66,11 +67,33 @@ h4 { /* Card titles */
     font-weight: $bolder;
 }
 
+h5 { /* Menu titles */
+    font-family: $ft-robot;
+    font-size: 2.2rem;
+    font-weight: $light;
+}
+
 h6 { /* Footer title */
     font-family: $ft-shrik;
     font-size: 2.8rem;
     font-weight: $regular;
     color: #fff;
+}
+
+.thumbnail-title-ftsize {
+    font-size: 2.5rem;
+    font-weight: $bold;
+}
+
+.thumbnail-price-ftsize {
+    font-size: 2.1rem;
+    font-weight: $bolder;
+    color: #353535;
+}
+
+.description { /* thumbnail dishes descriptions */
+    font-size: 2.14rem;
+    font-weight: $regular;
 }
 
 input::placeholder {

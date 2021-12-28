@@ -1,0 +1,203 @@
+/* pages/_menu.scss
+================================================================================================ */
+
+/* Menu section */
+
+.bg-menu {
+    position: absolute;
+    height: 31.5rem;
+    width: 100%;
+    z-index: -10;
+
+    &__dish-bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        height: 130%;
+        width: 100%;
+    }
+}  
+
+.menu-section {
+    background-color: $st-bg-clr;
+    height: 165.5rem;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    margin-top: 31.5rem;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin: 5rem 3.2rem 4rem 3.2rem;
+    }
+
+    &__menu {
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        margin: 0rem 2rem;
+
+        &__starters {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__dishes {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__desserts {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+#height-extend {
+    height: 177.3rem;
+}
+
+/* Starters articles */
+
+.aside {
+    margin-bottom: 2.5rem;
+
+    &__title {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+
+    &__bar {
+        width: 6rem;
+        border-bottom: 0.4rem solid $tertiary-clr;
+        margin: 0.8rem 0rem 2.4rem 1rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+    }
+}
+
+/* Menu thumbnail */
+
+.slider-menu {
+    background-color: #fff;
+    height: 10.2rem;
+    border-radius: 2rem;
+    box-shadow: $shadow-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.6rem;
+
+    &__desription-block {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &__txt {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 6rem;
+            padding-left: 1.8rem;
+            flex: 1;
+            min-width: 5rem;
+            
+            & .text-overflow {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+
+        &__price {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            width: 9rem;
+        }
+    }
+
+    &--hover {
+        background-color: $tertiary-clr;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        height: 100%;
+        width: 0rem;
+        transform: translateX(9rem);
+        transition: 300ms;
+    }
+
+    &:hover {
+
+        & .slider-menu__desription-block {
+            min-width: 50%;
+        }
+
+        & .slider-menu--hover {
+            transform: translateX(0);
+            transition: 300ms;
+            width: 10rem;
+        }
+    }
+}
+
+/* Menu button */
+
+.menu-section__menu__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    &__btn {
+        width: 27rem;
+    }
+}
+
+@media screen and (min-width: 993px) {
+
+    .menu-section {
+        height: 75rem;
+
+        &__menu {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            &__starters {
+                width: 32%;
+            }
+
+            &__dishes {
+                width: 32%;
+            }
+
+            &__desserts {
+                width: 32%;
+            }
+
+            &__btn-container {
+                width: 100%;
+            }
+        }
+    }
+
+    #height-extend {
+        height: 86.8rem;
+    }
+}
