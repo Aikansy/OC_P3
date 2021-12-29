@@ -81,8 +81,9 @@ h6 { /* Footer title */
 }
 
 .thumbnail-title-ftsize {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: $bold;
+    letter-spacing: -0.1rem;
 }
 
 .thumbnail-price-ftsize {
@@ -92,8 +93,9 @@ h6 { /* Footer title */
 }
 
 .description { /* thumbnail dishes descriptions */
-    font-size: 2.14rem;
-    font-weight: $regular;
+    font-size: 2.4rem;
+    font-weight: $light;
+    letter-spacing: -0.1rem;
 }
 
 input::placeholder {

@@ -299,6 +299,110 @@
     }
 }
 
+/* Thumbnail hover & checked */
+
+.slider-menu {
+    background-color: #fff;
+    height: $height-end;
+    border-radius: 2rem;
+    box-shadow: $shadow-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.6rem;
+    transform: translateY(0);
+    cursor: pointer;
+
+    &__desription-block {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &__txt {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 6.8rem;
+            padding-left: 1.8rem;
+            flex: 1;
+            min-width: 5rem;
+            
+            & .text-overflow {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+
+        &__price {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            width: 9rem;
+        }
+    }
+
+    &--hover {
+        @include flex-center-center;
+        background-color: $tertiary-clr;
+        color: #fff;
+        font-size: 3rem;
+        height: 100%;
+        width: 0rem;
+        transform: translateX(9rem);
+        transition: 500ms;
+
+        & .fa-check-circle {
+            transform: rotate(-360deg);
+            transition: 1000ms;
+        }
+    }
+
+    &:hover {
+
+        & .slider-menu__desription-block {
+            min-width: 30%;
+        }
+
+        & .slider-menu--hover {
+            transform: translateX(0);
+            transition: 500ms;
+            width: 10rem;
+
+            & .fa-check-circle {
+                transform: rotate(0deg);
+                transition: 500ms 100ms;
+            }
+        }
+    }
+}
+
+.thumb-container {
+    position: relative;
+    z-index: 2;
+
+    & input:checked + .slider-menu {
+
+        & .slider-menu__desription-block {
+            min-width: 30%;
+        }
+
+        & .slider-menu--hover {
+            transform: translateX(0);
+            transition: 500ms;
+            width: 10rem;
+
+            & .fa-check-circle {
+                transform: rotate(0deg);
+                transition: 500ms 100ms;
+            }
+        }
+    }
+}
+
 /* Keyframes Heart hover & checked */
 
 @keyframes heart-hover {
