@@ -6,20 +6,16 @@
 .header {
 
     &__arrow {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center-center;
         width: 9.4rem;
         position: absolute;
         left: 0;
 
         &__btn {
-            font-size: 3rem;
-            display: flex;
+            @include flex-center-center;
             height: 9.4rem;
             width: 9.4rem;
-            justify-content: center;
-            align-items: center;
+            font-size: 3rem;
         }
     }
 }
@@ -33,8 +29,8 @@
     color: #fff;
     font-size: 2.2rem;
     font-weight: $bold;
-    background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 0%, #ff79da 100%);
-    box-shadow: 0rem 0.1rem 1rem #bababa;
+    background: $bg-degraded;
+    box-shadow: $shadow-light;
     position: relative;
     z-index: 1;
     cursor: pointer;
@@ -47,13 +43,8 @@
     }
 
     &__bg {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(360deg, #9a9aff 0%, #c595ff 0%, #ffbaeb 100%);
-        opacity: 0;
+        @include btn-position-before;
+        background: $bg-degraded;
         z-index: -1;
         transition: opacity 250ms;
         border-radius: 5rem;
@@ -75,9 +66,7 @@
     z-index: 1;
 
     &__order {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center-center;
         color: #fff;
         background-color: $primary-clr;
         height: 3.5rem;
@@ -98,13 +87,8 @@
         z-index: 1;
 
         &--clr {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+            @include btn-position-before;
             color: $primary-clr;
-            opacity: 0;
             transition: opacity 250ms;
         }
     }
@@ -129,13 +113,8 @@
     }
 
     &__bg {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        @include btn-position-before;
         background-color: #f5edff;
-        opacity: 0;
         z-index: -1;
         box-shadow: $shadow-dark;
         transition: opacity 250ms;
@@ -170,12 +149,10 @@
             position: relative;
 
             &__new {
+                @include flex-center-center;
                 position: absolute;
                 top: 1.8rem;
                 right: 2rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 font-size: 2.1rem;
                 font-weight: $bold;
                 color: #139273;
@@ -186,9 +163,7 @@
             }
 
             &__bg-img {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-center-center;
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
@@ -219,13 +194,8 @@
     }
 
     &--hover {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        @include btn-position-before;
         box-shadow: $shadow-dark;
-        opacity: 0;
         z-index: -1;
         transition: opacity 250ms;
         border-radius: 2rem;
@@ -240,52 +210,31 @@
     bottom: 6.7rem;
     right: 4rem;
     z-index: 2;
+    cursor: pointer;
 
     & .slider {
         position: relative;
         z-index: 2;
-        cursor: pointer;
 
         &__heart {
             font-size: 3.5rem;
         }
 
         &__heart--hover {
+            @include btn-position-before;
+            @include heart-txt-clr;
             font-size: 3.5rem;
-            background: -webkit-linear-gradient($primary-clr, $secondary-clr);
-            -webkit-background-clip: text;
-            -moz-background-clip: txt;
-            -webkit-text-fill-color: transparent;
-            -moz-text-decoration-color: transparent;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
             text-shadow: $shadow-light;
         }
 
         &__heart--checked {
+            @include btn-position-before;
+            @include heart-txt-clr;
             font-size: 3.5rem;
-            background: -webkit-linear-gradient($primary-clr, $secondary-clr);
-            -webkit-background-clip: text;
-            -moz-background-clip: txt;
-            -webkit-text-fill-color: transparent;
-            -moz-text-decoration-color: transparent;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
         }
 
         &:hover {
-            -webkit-animation: heart-hover 1100ms;
-            -moz-animation: heart-hover 1100ms;
-            animation: heart-hover 1100ms;
-            animation-iteration-count: infinite;
+            @include heart-hover-animation;
 
             & .slider__heart--hover {
                 opacity: 1;
@@ -297,11 +246,7 @@
     & input:checked + .slider {
 
         & .slider__heart--checked {
-            -webkit-animation: heart-checked 1200ms;
-            -moz-animation: heart-checked 1200ms;
-            animation: heart-checked 1200ms;
-            animation-fill-mode: both;
-            z-index: 4;
+            @include heart-checked-animation;
         }
     }
 }
@@ -313,52 +258,31 @@
     position: relative;
     top: 0.6rem;
     left: -2.6rem;
+    cursor: pointer;
 
     &__slider {
         position: relative;
         z-index: 2;
-        cursor: pointer;
 
         &__heart {
             font-size: 3.5rem;
         }
 
         &__heart--hover {
+            @include btn-position-before;
+            @include heart-txt-clr;
             font-size: 3.5rem;
-            background: -webkit-linear-gradient($primary-clr, $secondary-clr);
-            -webkit-background-clip: text;
-            -moz-background-clip: txt;
-            -webkit-text-fill-color: transparent;
-            -moz-text-decoration-color: transparent;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
             text-shadow: $shadow-light;
         }
 
         &__heart--checked {
+            @include btn-position-before;
+            @include heart-txt-clr;
             font-size: 3.5rem;
-            background: -webkit-linear-gradient($primary-clr, $secondary-clr);
-            -webkit-background-clip: text;
-            -moz-background-clip: txt;
-            -webkit-text-fill-color: transparent;
-            -moz-text-decoration-color: transparent;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
         }
 
         &:hover {
-            -webkit-animation: heart-hover 1100ms;
-            -moz-animation: heart-hover 1100ms;
-            animation: heart-hover 1100ms;
-            animation-iteration-count: infinite;
+            @include heart-hover-animation;
 
             & .heart-menu__slider__heart--hover {
                 opacity: 1;
@@ -370,11 +294,7 @@
     & input:checked + .heart-menu__slider {
 
         & .heart-menu__slider__heart--checked {
-            -webkit-animation: heart-checked 1200ms;
-            -moz-animation: heart-checked 1200ms;
-            animation: heart-checked 1200ms;
-            animation-fill-mode: both;
-            z-index: 4;
+            @include heart-checked-animation;
         }
     }
 }

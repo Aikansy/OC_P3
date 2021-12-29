@@ -8,6 +8,49 @@
     font-weight: $bold;
 }
 
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Buttons
+
+@mixin btn-position-before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+
+// Heart
+
+@mixin heart-txt-clr {
+    background: -webkit-linear-gradient($primary-clr, $secondary-clr);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: txt;
+    text-decoration-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -moz-text-decoration-color: transparent;
+}
+
+@mixin heart-hover-animation {
+    -webkit-animation: heart-hover 1100ms;
+    -moz-animation: heart-hover 1100ms;
+    animation: heart-hover 1100ms;
+    animation-iteration-count: infinite;
+}
+
+@mixin heart-checked-animation {
+    -webkit-animation: heart-checked 1200ms forwards;
+    -moz-animation: heart-checked 1200ms forwards;
+    animation: heart-checked 1200ms forwards;
+    z-index: 4;
+}
+
 // Section titles
 
 @mixin h3-config {

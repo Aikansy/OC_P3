@@ -19,17 +19,11 @@ $bg-degraded: linear-gradient(355deg, #4a4a9e 0%, #9356dc 0%, #ff79da 100%);
 
 // Roboto font-weight
 
-$thin: 100;
 $light: 300;
 $regular: 400;
 $medium: 500;
 $bold: 700;
 $bolder: 900;
-
-// flex-direction
-
-$row: row;
-$col: column;
 
 // color themes
 
@@ -40,3 +34,11 @@ $tertiary-clr: #99e2d0;
 // loader cookie
 
 $shake-intensity: 10%;
+
+// Restaurant page thumbnail animation properties //
+
+$height-start: 12rem;
+$height-end: 10.2rem;
+$anim-duration: 1500ms;
+$anim-delay: 150ms;
+$thumbnail-nbr: 10;

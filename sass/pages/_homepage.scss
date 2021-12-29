@@ -5,74 +5,95 @@
 
 .loader-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    color: #fff;
-    background: $primary-clr;
     width: 100%;
     height: 100vh;
     -webkit-animation: loader-screen 4000ms forwards;
     -moz-animation: loader-screen 4000ms forwards;
     animation: loader-screen 4000ms forwards;
+    overflow: visible;
 
-    &__victim {
-        display: flex;
-        position: relative;
-        right: 2rem;
-        font-size: 10rem;
+    &__block {
+        @include flex-center-center;
 
-        &__happy {
+        &__victim {
+            @include heart-txt-clr;
+            display: flex;
             position: relative;
-            -webkit-animation: happy 500ms forwards;
-            -moz-animation: happy 500ms forwards;
-            animation: happy 500ms forwards;
+            right: 2rem;
+            font-size: 10rem;
+
+            &__happy {
+                @include heart-txt-clr;
+                position: relative;
+                -webkit-animation: happy 500ms forwards;
+                -moz-animation: happy 500ms forwards;
+                animation: happy 500ms forwards;
+            }
+
+            &__shocked {
+                @include heart-txt-clr;
+                position: absolute;
+                opacity: 0;
+                -webkit-animation: shocked 1500ms 500ms;
+                -moz-animation: shocked 1500ms 500ms;
+                animation: shocked 1500ms 500ms;
+            }
+
+            &__oh {
+                @include heart-txt-clr;
+                position: absolute;
+                opacity: 0;
+                -webkit-animation: oh 1000ms 2000ms;
+                -moz-animation: oh 1000ms 2000ms;
+                animation: oh 1000ms 2000ms;
+            }
         }
 
-        &__shocked {
-            position: absolute;
-            opacity: 0;
-            -webkit-animation: shocked 1500ms 500ms;
-            -moz-animation: shocked 1500ms 500ms;
-            animation: shocked 1500ms 500ms;
+        &__cookie {
+            @include heart-txt-clr;
+            position: relative;
+            font-size: 6rem;
+
+            &__full {
+                @include heart-txt-clr;
+                -webkit-animation: cookie-bite 1000ms forwards;
+                -moz-animation: cookie-bite 1000ms forwards;
+                animation: cookie-bite 1000ms forwards;
+                position: absolute;
+            }
+
+            &__bite {
+                @include heart-txt-clr;
+                opacity: 0;
+                -webkit-animation: cookie-eaten 1000ms 1000ms forwards;
+                -moz-animation: cookie-eaten 1000ms 1000ms forwards;
+                animation: cookie-eaten 1000ms 1000ms forwards;
+            }
         }
 
-        &__oh {
-            position: absolute;
+        &__ghost {
+            @include flex-center-center;
+            @include heart-txt-clr;
+            height: 15vh;
+            font-size: 12rem;
+            position: relative;
+            left: 2rem;
+            -webkit-animation: ghost-stealer 2500ms forwards;
+            -moz-animation: ghost-stealer 2500ms forwards;
+            animation: ghost-stealer 2500ms forwards;
             opacity: 0;
-            -webkit-animation: oh 1000ms 2000ms;
-            -moz-animation: oh 1000ms 2000ms;
-            animation: oh 1000ms 2000ms;
         }
     }
-
-    &__cookie {
-        position: relative;
-        font-size: 6rem;
-
-        &__full {
-            -webkit-animation: cookie-bite 1000ms forwards;
-            -moz-animation: cookie-bite 1000ms forwards;
-            animation: cookie-bite 1000ms forwards;
-            position: absolute;
-        }
-
-        &__bite {
-            opacity: 0;
-            -webkit-animation: cookie-eaten 1000ms 1000ms forwards;
-            -moz-animation: cookie-eaten 1000ms 1000ms forwards;
-            animation: cookie-eaten 1000ms 1000ms forwards;
-        }
-    }
-
-    &__ghost {
-        font-size: 12rem;
-        position: relative;
-        left: 2rem;
-        -webkit-animation: ghost-stealer 2500ms forwards;
-        -moz-animation: ghost-stealer 2500ms forwards;
-        animation: ghost-stealer 2500ms forwards;
-        position: relative;
+    &__shout {
+        display: flex;
+        justify-content: center;
+        font-size: 5vw;
         opacity: 0;
+        -webkit-animation: shout 1000ms 2000ms forwards;
+        -moz-animation: shout 1000ms 2000ms forwards;
+        animation: shout 1000ms 2000ms forwards;
     }
 }
 
@@ -98,8 +119,11 @@
         transform: translateX(0rem) rotate(0deg);
         opacity: 1;
     }
-    100% {
+    80% {
         transform: translateX(-5rem) rotate(-25deg);
+    }
+    100% {
+        transform: translateX(-5rem) rotate(0deg);
         opacity: 1;
         visibility: hidden;
     }
@@ -107,17 +131,28 @@
 
 @keyframes oh {
     0% {
-        transform: translateX(-5rem) rotate(-25deg) scale(1);
+        transform: translateX(-5rem) scale(1);
         opacity: 1;
     }
     60% {
-        transform: translateX(-5rem) rotate(-25deg) scale(1);
+        transform: translateX(-5rem) scale(1);
     }
     69% {
         transform: translateX(0) rotate(0) scale(1);
     }
     100% {
-        transform: translateX(8rem) rotate(0) scale(3);
+        transform: translateX(8rem) rotate(0) scale(2);
+        opacity: 1;
+    }
+}
+
+@keyframes shout {
+    69% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
         opacity: 1;
     }
 }
@@ -293,9 +328,7 @@
 /* (Homepage/1st section) Search field */
 
 .search-field {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center-center;
     background-color: $nd-bg-clr;
     height: 7.4rem;
 
@@ -428,10 +461,9 @@
     .regroup-fields {
 
         &__explore-field {
+            @include flex-center-center;
             height: 33rem;
             width: 100%;
-            justify-content: center;
-            align-items: center;
 
             &__h3 {
                 margin-top: 0rem;

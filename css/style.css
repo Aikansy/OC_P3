@@ -115,6 +115,7 @@ input[type=search] {
 }
 
 input[type=checkbox] {
+  cursor: pointer;
   display: none;
 }
 
@@ -130,12 +131,12 @@ input[type=checkbox] {
   left: 0;
 }
 .header__arrow__btn {
-  font-size: 3rem;
   display: flex;
-  height: 9.4rem;
-  width: 9.4rem;
   justify-content: center;
   align-items: center;
+  height: 9.4rem;
+  width: 9.4rem;
+  font-size: 3rem;
 }
 
 /* Big button */
@@ -147,7 +148,7 @@ input[type=checkbox] {
   font-size: 2.2rem;
   font-weight: 700;
   background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 0%, #ff79da 100%);
-  box-shadow: 0rem 0.1rem 1rem #bababa;
+  box-shadow: 0rem 0.4rem 1.5rem #dfdfdf;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -161,8 +162,8 @@ input[type=checkbox] {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(360deg, #9a9aff 0%, #c595ff 0%, #ffbaeb 100%);
   opacity: 0;
+  background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 0%, #ff79da 100%);
   z-index: -1;
   transition: opacity 250ms;
   border-radius: 5rem;
@@ -209,8 +210,8 @@ input[type=checkbox] {
   right: 0;
   bottom: 0;
   left: 0;
-  color: #9356dc;
   opacity: 0;
+  color: #9356dc;
   transition: opacity 250ms;
 }
 .nav-btn__txt {
@@ -229,8 +230,8 @@ input[type=checkbox] {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #f5edff;
   opacity: 0;
+  background-color: #f5edff;
   z-index: -1;
   box-shadow: 0rem 0.1rem 1.5rem #bdbdbd;
   transition: opacity 250ms;
@@ -263,12 +264,12 @@ input[type=checkbox] {
   position: relative;
 }
 .card__figure__img__new {
-  position: absolute;
-  top: 1.8rem;
-  right: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 1.8rem;
+  right: 2rem;
   font-size: 2.1rem;
   font-weight: 700;
   color: #139273;
@@ -308,8 +309,8 @@ input[type=checkbox] {
   right: 0;
   bottom: 0;
   left: 0;
-  box-shadow: 0rem 0.1rem 1.5rem #bdbdbd;
   opacity: 0;
+  box-shadow: 0rem 0.1rem 1.5rem #bdbdbd;
   z-index: -1;
   transition: opacity 250ms;
   border-radius: 2rem;
@@ -322,43 +323,47 @@ input[type=checkbox] {
   bottom: 6.7rem;
   right: 4rem;
   z-index: 2;
+  cursor: pointer;
 }
 .heart-container .slider {
   position: relative;
   z-index: 2;
-  cursor: pointer;
 }
 .heart-container .slider__heart {
   font-size: 3.5rem;
 }
 .heart-container .slider__heart--hover {
-  font-size: 3.5rem;
-  background: -webkit-linear-gradient(#9356dc, #FF79da);
-  -webkit-background-clip: text;
-  -moz-background-clip: txt;
-  -webkit-text-fill-color: transparent;
-  -moz-text-decoration-color: transparent;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   opacity: 0;
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
+  font-size: 3.5rem;
   text-shadow: 0rem 0.4rem 1.5rem #dfdfdf;
 }
 .heart-container .slider__heart--checked {
-  font-size: 3.5rem;
-  background: -webkit-linear-gradient(#9356dc, #FF79da);
-  -webkit-background-clip: text;
-  -moz-background-clip: txt;
-  -webkit-text-fill-color: transparent;
-  -moz-text-decoration-color: transparent;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   opacity: 0;
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
+  font-size: 3.5rem;
 }
 .heart-container .slider:hover {
   -webkit-animation: heart-hover 1100ms;
@@ -371,10 +376,9 @@ input[type=checkbox] {
   z-index: 3;
 }
 .heart-container input:checked + .slider .slider__heart--checked {
-  -webkit-animation: heart-checked 1200ms;
-  -moz-animation: heart-checked 1200ms;
-  animation: heart-checked 1200ms;
-  animation-fill-mode: both;
+  -webkit-animation: heart-checked 1200ms forwards;
+  -moz-animation: heart-checked 1200ms forwards;
+  animation: heart-checked 1200ms forwards;
   z-index: 4;
 }
 
@@ -384,43 +388,47 @@ input[type=checkbox] {
   position: relative;
   top: 0.6rem;
   left: -2.6rem;
+  cursor: pointer;
 }
 .heart-menu__slider {
   position: relative;
   z-index: 2;
-  cursor: pointer;
 }
 .heart-menu__slider__heart {
   font-size: 3.5rem;
 }
 .heart-menu__slider__heart--hover {
-  font-size: 3.5rem;
-  background: -webkit-linear-gradient(#9356dc, #FF79da);
-  -webkit-background-clip: text;
-  -moz-background-clip: txt;
-  -webkit-text-fill-color: transparent;
-  -moz-text-decoration-color: transparent;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   opacity: 0;
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
+  font-size: 3.5rem;
   text-shadow: 0rem 0.4rem 1.5rem #dfdfdf;
 }
 .heart-menu__slider__heart--checked {
-  font-size: 3.5rem;
-  background: -webkit-linear-gradient(#9356dc, #FF79da);
-  -webkit-background-clip: text;
-  -moz-background-clip: txt;
-  -webkit-text-fill-color: transparent;
-  -moz-text-decoration-color: transparent;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   opacity: 0;
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
+  font-size: 3.5rem;
 }
 .heart-menu__slider:hover {
   -webkit-animation: heart-hover 1100ms;
@@ -433,10 +441,9 @@ input[type=checkbox] {
   z-index: 3;
 }
 .heart-menu input:checked + .heart-menu__slider .heart-menu__slider__heart--checked {
-  -webkit-animation: heart-checked 1200ms;
-  -moz-animation: heart-checked 1200ms;
-  animation: heart-checked 1200ms;
-  animation-fill-mode: both;
+  -webkit-animation: heart-checked 1200ms forwards;
+  -moz-animation: heart-checked 1200ms forwards;
+  animation: heart-checked 1200ms forwards;
   z-index: 4;
 }
 
@@ -535,67 +542,139 @@ input[type=checkbox] {
 /* Loader-section */
 .loader-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  color: #fff;
-  background: #9356dc;
   width: 100%;
   height: 100vh;
   -webkit-animation: loader-screen 4000ms forwards;
   -moz-animation: loader-screen 4000ms forwards;
   animation: loader-screen 4000ms forwards;
+  overflow: visible;
 }
-.loader-section__victim {
+.loader-section__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-section__block__victim {
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
   display: flex;
   position: relative;
   right: 2rem;
   font-size: 10rem;
 }
-.loader-section__victim__happy {
+.loader-section__block__victim__happy {
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
   position: relative;
   -webkit-animation: happy 500ms forwards;
   -moz-animation: happy 500ms forwards;
   animation: happy 500ms forwards;
 }
-.loader-section__victim__shocked {
+.loader-section__block__victim__shocked {
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
   position: absolute;
   opacity: 0;
   -webkit-animation: shocked 1500ms 500ms;
   -moz-animation: shocked 1500ms 500ms;
   animation: shocked 1500ms 500ms;
 }
-.loader-section__victim__oh {
+.loader-section__block__victim__oh {
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
   position: absolute;
   opacity: 0;
   -webkit-animation: oh 1000ms 2000ms;
   -moz-animation: oh 1000ms 2000ms;
   animation: oh 1000ms 2000ms;
 }
-.loader-section__cookie {
+.loader-section__block__cookie {
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
   position: relative;
   font-size: 6rem;
 }
-.loader-section__cookie__full {
+.loader-section__block__cookie__full {
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
   -webkit-animation: cookie-bite 1000ms forwards;
   -moz-animation: cookie-bite 1000ms forwards;
   animation: cookie-bite 1000ms forwards;
   position: absolute;
 }
-.loader-section__cookie__bite {
+.loader-section__block__cookie__bite {
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
   opacity: 0;
   -webkit-animation: cookie-eaten 1000ms 1000ms forwards;
   -moz-animation: cookie-eaten 1000ms 1000ms forwards;
   animation: cookie-eaten 1000ms 1000ms forwards;
 }
-.loader-section__ghost {
+.loader-section__block__ghost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(#9356dc, #FF79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: txt;
+  text-decoration-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-decoration-color: transparent;
+  height: 15vh;
   font-size: 12rem;
   position: relative;
   left: 2rem;
   -webkit-animation: ghost-stealer 2500ms forwards;
   -moz-animation: ghost-stealer 2500ms forwards;
   animation: ghost-stealer 2500ms forwards;
-  position: relative;
   opacity: 0;
+}
+.loader-section__shout {
+  display: flex;
+  justify-content: center;
+  font-size: 5vw;
+  opacity: 0;
+  -webkit-animation: shout 1000ms 2000ms forwards;
+  -moz-animation: shout 1000ms 2000ms forwards;
+  animation: shout 1000ms 2000ms forwards;
 }
 
 @keyframes loader-screen {
@@ -618,25 +697,38 @@ input[type=checkbox] {
     transform: translateX(0rem) rotate(0deg);
     opacity: 1;
   }
-  100% {
+  80% {
     transform: translateX(-5rem) rotate(-25deg);
+  }
+  100% {
+    transform: translateX(-5rem) rotate(0deg);
     opacity: 1;
     visibility: hidden;
   }
 }
 @keyframes oh {
   0% {
-    transform: translateX(-5rem) rotate(-25deg) scale(1);
+    transform: translateX(-5rem) scale(1);
     opacity: 1;
   }
   60% {
-    transform: translateX(-5rem) rotate(-25deg) scale(1);
+    transform: translateX(-5rem) scale(1);
   }
   69% {
     transform: translateX(0) rotate(0) scale(1);
   }
   100% {
-    transform: translateX(8rem) rotate(0) scale(3);
+    transform: translateX(8rem) rotate(0) scale(2);
+    opacity: 1;
+  }
+}
+@keyframes shout {
+  69% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
     opacity: 1;
   }
 }
@@ -911,10 +1003,11 @@ input[type=checkbox] {
 /* (Homepage/1st section) Desktop mode */
 @media screen and (min-width: 993px) {
   .regroup-fields__explore-field {
-    height: 33rem;
-    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 33rem;
+    width: 100%;
   }
   .regroup-fields__explore-field__h3 {
     margin-top: 0rem;
@@ -982,62 +1075,39 @@ input[type=checkbox] {
 /* pages/_menu.scss
 ================================================================================================ */
 /* Menu section */
-.bg-menu {
-  position: absolute;
+.section-card__bg-img {
+  width: 100%;
   height: 31.5rem;
-  width: 100%;
-  z-index: -10;
+  position: relative;
+  z-index: -1;
 }
-.bg-menu__dish-bg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.section-card__bg-img__img {
   object-fit: cover;
-  height: 130%;
+  height: 120%;
   width: 100%;
 }
-
-.menu-section {
+.section-card__menu-card {
+  z-index: 1;
   background-color: #f6f6f6;
-  height: 165.5rem;
-  display: flex;
-  flex-direction: column;
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
-  margin-top: 31.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.menu-section__header {
+.section-card__menu-card__header {
   display: flex;
   justify-content: space-between;
-  margin: 5rem 3.2rem 4rem 3.2rem;
+  margin: 5rem 0rem 4rem 0rem;
+  width: 89%;
 }
-.menu-section__menu {
-  height: 10rem;
+.section-card__menu-card__aside {
   display: flex;
   flex-direction: column;
-  margin: 0rem 2rem;
-}
-.menu-section__menu__starters {
-  display: flex;
-  flex-direction: column;
-}
-.menu-section__menu__dishes {
-  display: flex;
-  flex-direction: column;
-}
-.menu-section__menu__desserts {
-  display: flex;
-  flex-direction: column;
-}
-
-#height-extend {
-  height: 177.3rem;
-}
-
-/* Starters articles */
-.aside {
+  width: 92%;
   margin-bottom: 2.5rem;
 }
+
 .aside__title {
   display: inline-block;
   margin-left: 1rem;
@@ -1053,7 +1123,6 @@ input[type=checkbox] {
   list-style-type: none;
 }
 
-/* Menu thumbnail */
 .slider-menu {
   background-color: #fff;
   height: 10.2rem;
@@ -1062,10 +1131,11 @@ input[type=checkbox] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
   overflow: hidden;
   position: relative;
   margin-bottom: 1.6rem;
+  transform: translateY(0);
+  cursor: pointer;
 }
 .slider-menu__desription-block {
   display: flex;
@@ -1094,61 +1164,239 @@ input[type=checkbox] {
   width: 9rem;
 }
 .slider-menu--hover {
-  background-color: #99e2d0;
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #99e2d0;
+  color: #fff;
   font-size: 3rem;
   height: 100%;
   width: 0rem;
   transform: translateX(9rem);
-  transition: 300ms;
+  transition: 500ms;
+}
+.slider-menu--hover .fa-check-circle {
+  transform: rotate(-360deg);
+  transition: 1000ms;
 }
 .slider-menu:hover .slider-menu__desription-block {
   min-width: 50%;
 }
 .slider-menu:hover .slider-menu--hover {
   transform: translateX(0);
-  transition: 300ms;
+  transition: 500ms;
   width: 10rem;
 }
+.slider-menu:hover .slider-menu--hover .fa-check-circle {
+  transform: rotate(0deg);
+  transition: 500ms 100ms;
+}
 
+/* Restaurant page thumbnail animations */
+/* Mobile & Tablet modes */
+@media screen and (max-width: 992px) {
+  .delay-1 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 150ms;
+  }
+
+  .delay-2 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 300ms;
+  }
+
+  .delay-3 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 450ms;
+  }
+
+  .delay-4 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 600ms;
+  }
+
+  .delay-5 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 750ms;
+  }
+
+  .delay-6 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 900ms;
+  }
+
+  .delay-7 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 1050ms;
+  }
+
+  .delay-8 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 1200ms;
+  }
+
+  .delay-9 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 1350ms;
+  }
+}
+/* Desktop mode */
+@media screen and (min-width: 932px) {
+  .delay-desktop-1 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 150ms;
+  }
+
+  .delay-desktop-2 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 300ms;
+  }
+
+  .delay-desktop-3 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 450ms;
+  }
+
+  .delay-desktop-4 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 600ms;
+  }
+
+  .delay-desktop-5 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 750ms;
+  }
+
+  .delay-desktop-6 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 900ms;
+  }
+
+  .delay-desktop-7 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 1050ms;
+  }
+
+  .delay-desktop-8 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 1200ms;
+  }
+
+  .delay-desktop-9 {
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-animation: sliding-menu 1500ms forwards;
+    -moz-animation: sliding-menu 1500ms forwards;
+    animation: sliding-menu 1500ms forwards;
+    animation-delay: 1350ms;
+  }
+}
+@keyframes sliding-menu {
+  0% {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
 /* Menu button */
 .menu-section__menu__btn-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin: 2.5rem 0rem 8.5rem 0rem;
 }
 .menu-section__menu__btn-container__btn {
   width: 27rem;
 }
 
+/* Desktop mode */
 @media screen and (min-width: 993px) {
-  .menu-section {
-    height: 75rem;
-  }
-  .menu-section__menu {
+  .section-card__menu-card {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: flex-start;
   }
-  .menu-section__menu__starters {
+  .section-card__menu-card__header {
+    width: 97%;
+  }
+  .section-card__menu-card__aside {
     width: 32%;
-  }
-  .menu-section__menu__dishes {
-    width: 32%;
-  }
-  .menu-section__menu__desserts {
-    width: 32%;
-  }
-  .menu-section__menu__btn-container {
-    width: 100%;
   }
 
-  #height-extend {
-    height: 86.8rem;
+  .slider-menu {
+    height: 15rem;
   }
 }
 
