@@ -84,6 +84,7 @@ h6 {
 }
 
 .thumbnail-title-ftsize {
+  font-family: "Roboto", "sans-serif";
   font-size: 2.7rem;
   font-weight: 700;
   letter-spacing: -0.1rem;
@@ -97,6 +98,7 @@ h6 {
 
 .description {
   /* thumbnail dishes descriptions */
+  font-family: "Roboto", "sans-serif";
   font-size: 2.4rem;
   font-weight: 300;
   letter-spacing: -0.1rem;
@@ -634,26 +636,21 @@ input[type=checkbox] {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  -webkit-animation: loader-screen 3000ms forwards;
-  -moz-animation: loader-screen 3000ms forwards;
-  animation: loader-screen 3000ms forwards;
+  -webkit-animation: loader-screen 6000ms cubic-bezier(0.28, 0.7, 0.41, 1.01) forwards;
+  -moz-animation: loader-screen 6000ms cubic-bezier(0.28, 0.7, 0.41, 1.01) forwards;
+  animation: loader-screen 6000ms cubic-bezier(0.28, 0.7, 0.41, 1.01) forwards;
   position: relative;
+  opacity: 1;
 }
 .loader-section__block {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: -10rem;
 }
 .loader-section__block__cookie {
-  background: -webkit-linear-gradient(#9356dc, #FF79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: txt;
-  text-decoration-color: transparent;
-  -webkit-text-fill-color: transparent;
-  -moz-text-decoration-color: transparent;
   position: relative;
-  font-size: 6rem;
+  font-size: 10rem;
   margin: 0rem 1rem;
 }
 .loader-section__block__cookie__full {
@@ -665,25 +662,9 @@ input[type=checkbox] {
   -webkit-text-fill-color: transparent;
   -moz-text-decoration-color: transparent;
   position: absolute;
+  transform: translateX(-40rem);
 }
 .loader-section__block__cookie__bite {
-  background: -webkit-linear-gradient(#9356dc, #FF79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: txt;
-  text-decoration-color: transparent;
-  -webkit-text-fill-color: transparent;
-  -moz-text-decoration-color: transparent;
-}
-.loader-section__shout {
-  display: flex;
-  justify-content: center;
-  font-size: 4.3rem;
-  opacity: 0;
-  -webkit-animation: shout 3500ms;
-  -moz-animation: shout 3500ms;
-  animation: shout 3500ms;
-  position: relative;
   background: -webkit-linear-gradient(#9356dc, #FF79da);
   background-clip: text;
   -webkit-background-clip: text;
@@ -697,164 +678,124 @@ input[type=checkbox] {
   -webkit-animation: cookie-bite 1000ms forwards;
   -moz-animation: cookie-bite 1000ms forwards;
   animation: cookie-bite 1000ms forwards;
-  animation-delay: 112ms;
+  animation-delay: 250ms;
 }
 
 .cookie-delay-2 {
   -webkit-animation: cookie-bite 1000ms forwards;
   -moz-animation: cookie-bite 1000ms forwards;
   animation: cookie-bite 1000ms forwards;
-  animation-delay: 224ms;
+  animation-delay: 500ms;
 }
 
 .cookie-delay-3 {
   -webkit-animation: cookie-bite 1000ms forwards;
   -moz-animation: cookie-bite 1000ms forwards;
   animation: cookie-bite 1000ms forwards;
-  animation-delay: 336ms;
+  animation-delay: 750ms;
 }
 
 .cookie-bite-delay-1 {
-  -webkit-animation: cookie-eaten 1500ms forwards;
-  -moz-animation: cookie-eaten 1500ms forwards;
-  animation: cookie-eaten 1500ms forwards;
-  animation-delay: 1112ms;
+  -webkit-animation: cookie-eaten 500ms forwards;
+  -moz-animation: cookie-eaten 500ms forwards;
+  animation: cookie-eaten 500ms forwards;
+  animation-delay: 1250ms;
   opacity: 0;
 }
 
 .cookie-bite-delay-2 {
-  -webkit-animation: cookie-eaten 1500ms forwards;
-  -moz-animation: cookie-eaten 1500ms forwards;
-  animation: cookie-eaten 1500ms forwards;
-  animation-delay: 1224ms;
+  -webkit-animation: cookie-eaten 500ms forwards;
+  -moz-animation: cookie-eaten 500ms forwards;
+  animation: cookie-eaten 500ms forwards;
+  animation-delay: 1500ms;
   opacity: 0;
 }
 
 .cookie-bite-delay-3 {
-  -webkit-animation: cookie-eaten 1500ms forwards;
-  -moz-animation: cookie-eaten 1500ms forwards;
-  animation: cookie-eaten 1500ms forwards;
-  animation-delay: 1336ms;
+  -webkit-animation: cookie-eaten 500ms forwards;
+  -moz-animation: cookie-eaten 500ms forwards;
+  animation: cookie-eaten 500ms forwards;
+  animation-delay: 1750ms;
   opacity: 0;
 }
 
 @keyframes loader-screen {
-  75% {
+  50% {
+    visibility: visible;
+    opacity: 1;
     height: 100vh;
   }
   100% {
-    height: 0;
-  }
-}
-@keyframes shout {
-  30% {
+    visibility: hidden;
     opacity: 0;
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(1rem);
-    opacity: 1;
-    filter: blur(0.3rem);
+    height: 0;
   }
 }
 @keyframes cookie-bite {
   0% {
-    transform: translateY(0);
-  }
-  10% {
-    transform: translateY(10%);
-  }
-  20% {
-    transform: translateY(-10%);
-  }
-  30% {
-    transform: translateY(10%);
-  }
-  40% {
-    transform: translateY(-10%);
-  }
-  50% {
-    transform: translateY(10%);
-  }
-  60% {
-    transform: translateY(-10%);
-  }
-  70% {
-    transform: translateY(10%);
-  }
-  80% {
-    transform: translateY(-10%);
-  }
-  90% {
-    transform: translateY(10%);
+    transform: translateX(-40rem) rotate(0deg);
   }
   100% {
-    transform: translateY(-10%);
+    transform: translateX(0rem) rotate(360deg);
     visibility: hidden;
   }
 }
 @keyframes cookie-eaten {
   0% {
-    transform: translateY(-10%);
+    transform: translateY(0);
     opacity: 1;
   }
-  33.9% {
+  10% {
     transform: translateY(-10%);
   }
-  40.5% {
-    transform: translateY(-10%);
-  }
-  47.1% {
+  20% {
     transform: translateY(10%);
   }
-  53.7% {
+  30% {
     transform: translateY(-10%);
   }
-  60.3% {
+  40% {
     transform: translateY(10%);
   }
-  66.9% {
+  50% {
     transform: translateY(-10%);
   }
-  73.5% {
+  60% {
     transform: translateY(10%);
   }
-  80.1% {
+  70% {
     transform: translateY(-10%);
   }
-  86.7% {
+  80% {
     transform: translateY(10%);
   }
-  93.3% {
+  90% {
     transform: translateY(-10%);
   }
   100% {
-    transform: translateY(-10%);
+    transform: translateY(10%);
     opacity: 1;
     visibility: hidden;
   }
 }
 /* Homepage */
 .index {
-  visibility: hidden;
   height: 0;
-  width: 100%;
+  opacity: 0;
   overflow: hidden;
-  -webkit-animation: display-index 4000ms 1500ms forwards;
-  -moz-animation: display-index 4000ms 1500ms forwards;
-  animation: display-index 4000ms 1500ms forwards;
+  -webkit-animation: display-index 100ms 2250ms forwards;
+  -moz-animation: display-index 100ms 2250ms forwards;
+  animation: display-index 100ms 2250ms forwards;
 }
 
 @keyframes display-index {
   from {
-    visibility: visible;
-    opacity: 0;
     height: 0;
+    opacity: 0;
   }
   to {
-    visibility: visible;
-    opacity: 1;
     height: auto;
+    opacity: 1;
   }
 }
 /* (Homepage) 1st section */

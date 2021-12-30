@@ -81,6 +81,7 @@ h6 { /* Footer title */
 }
 
 .thumbnail-title-ftsize {
+    font-family: $ft-robot;
     font-size: 2.7rem;
     font-weight: $bold;
     letter-spacing: -0.1rem;
@@ -93,6 +94,7 @@ h6 { /* Footer title */
 }
 
 .description { /* thumbnail dishes descriptions */
+    font-family: $ft-robot;
     font-size: 2.4rem;
     font-weight: $light;
     letter-spacing: -0.1rem;
