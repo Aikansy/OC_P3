@@ -6,7 +6,7 @@
 .header {
     display: flex;
     justify-content: center;
-    height: 9.4rem;
+    height: 7rem;
     box-shadow: 0rem 0.1rem 0.8rem #bdbdbd;
     position: relative;
 
@@ -22,7 +22,7 @@
     background-color: #353535;
     display: flex;
     flex-direction: column;
-    height: 29.5rem;
+    height: 22rem;
     padding-left: 3.2rem;
     
     &__h6 {
@@ -37,29 +37,46 @@
         &__a {
             display: flex;
             color: #fff;
-            font-size: 1.8rem;
+            font-size: 1.3rem;
             font-weight: $medium;
             margin-bottom: 1.4rem;
 
             & i {
-                width: 4rem;
+                width: 2rem;
             }
 
             & p {
-                font-size: 2.15rem;
+                font-size: 1.15rem;
             }
         }
     }
 }
 
-@media screen and (min-width: 769px){ /* Tablet mode */
+@media screen and (min-width: 769px){ /* Tablet & Desktop mode */
+
+    .header {
+        height: 9.4rem;
+    }
 
     .footer {
+        height: 29.5rem;
         align-items: center;
         padding-left: 0rem;
 
-        & ul {
+        &__ul {
             align-items: center;
+
+            &__a {
+                font-size: 1.8rem;
+
+                & i {
+                    width: 4rem;
+                }
+
+                & p {
+                    font-size: 2.15rem;
+                }
+            }
         }
     }
 }

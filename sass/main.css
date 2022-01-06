@@ -38,15 +38,27 @@ a {
 
 p {
   font-family: "Roboto", "sans-serif";
-  font-size: 2.5rem;
+  font-size: 1.4rem;
 }
 
+@media screen and (min-width: 769px) {
+  p {
+    /* Sections titles */
+    font-size: 2.5rem;
+  }
+}
 h1 {
   /* Logo title */
   font-family: "Shrikhand", "sans-serif";
-  font-size: 4.3rem;
+  font-size: 3rem;
 }
 
+@media screen and (min-width: 769px) {
+  h1 {
+    /* Sections titles */
+    font-size: 4.3rem;
+  }
+}
 h2 {
   /* Restaurants titles */
   font-family: "Shrikhand", "sans-serif";
@@ -57,10 +69,17 @@ h2 {
 h3 {
   /* Sections titles */
   font-family: "Roboto", "sans-serif";
-  font-size: 3.5rem;
+  font-size: 2.2rem;
   font-weight: 900;
+  letter-spacing: -0.05rem;
 }
 
+@media screen and (min-width: 769px) {
+  h3 {
+    /* Sections titles */
+    font-size: 3.5rem;
+  }
+}
 h4 {
   /* Card titles */
   font-family: "Roboto", "sans-serif";
@@ -112,6 +131,7 @@ input::-moz-placeholder {
   /* Firefox */
   font-family: "Roboto", "sans-serif";
   /* Firefox */
+  font-size: 1.8rem;
 }
 
 input:-ms-input-placeholder {
@@ -122,6 +142,7 @@ input:-ms-input-placeholder {
   /* Firefox */
   font-family: "Roboto", "sans-serif";
   /* Firefox */
+  font-size: 1.8rem;
 }
 
 input::placeholder {
@@ -132,8 +153,31 @@ input::placeholder {
   /* Firefox */
   font-family: "Roboto", "sans-serif";
   /* Firefox */
+  font-size: 1.8rem;
 }
 
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  input::-moz-placeholder {
+    font-size: 2rem;
+  }
+  input:-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  input::placeholder {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  input::-moz-placeholder {
+    font-size: 2.5rem;
+  }
+  input:-ms-input-placeholder {
+    font-size: 2.5rem;
+  }
+  input::placeholder {
+    font-size: 2.5rem;
+  }
+}
 input[type=search] {
   cursor: pointer;
 }
@@ -167,9 +211,9 @@ input[type=checkbox] {
 .btn {
   border: none;
   border-radius: 5rem;
-  padding: 2.5rem 3.2rem;
+  padding: 2rem 3.2rem;
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 1.55rem;
   font-weight: 700;
   background: linear-gradient(355deg, #4a4a9e 0%, #9356dc 0%, #ff79da 100%);
   box-shadow: 0rem 0.4rem 1.5rem #dfdfdf;
@@ -194,14 +238,20 @@ input[type=checkbox] {
   box-shadow: 0rem 0.1rem 1.5rem #bdbdbd;
 }
 
+@media screen and (min-width: 769px) {
+  .btn {
+    font-size: 2.2rem;
+    padding: 2.5rem 3.2rem;
+  }
+}
 /* Nav button (Homepage/1st section/Nav-field) */
 .nav-btn {
   display: flex;
   align-items: center;
   background-color: #f6f6f6;
-  padding: 4rem 0rem;
-  margin: 0rem 2.5rem 3rem 1.5rem;
-  border-radius: 2.8rem;
+  padding: 2rem 0rem;
+  margin: 0rem 1rem 3rem 3rem;
+  border-radius: 2rem;
   box-shadow: 0rem 0.4rem 1.5rem #dfdfdf;
   position: relative;
   z-index: 1;
@@ -212,10 +262,10 @@ input[type=checkbox] {
   align-items: center;
   color: #fff;
   background-color: #9356dc;
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 1.4rem;
   position: relative;
   left: -1.8rem;
 }
@@ -223,8 +273,8 @@ input[type=checkbox] {
   display: flex;
   justify-content: center;
   color: #7e7e7e;
-  font-size: 2.6rem;
-  margin: 0rem 1.8rem;
+  font-size: 2rem;
+  margin: 0rem 0.5rem;
   position: relative;
   z-index: 1;
 }
@@ -240,7 +290,7 @@ input[type=checkbox] {
 }
 .nav-btn__txt {
   font-weight: 700;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 .nav-btn:hover .nav-btn__icon--clr {
   opacity: 1;
@@ -262,10 +312,27 @@ input[type=checkbox] {
   border-radius: 2.8rem;
 }
 
+@media screen and (min-width: 769px) {
+  .nav-btn {
+    padding: 4rem 0rem;
+  }
+  .nav-btn__order {
+    font-size: 2rem;
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  .nav-btn__icon {
+    font-size: 2.6rem;
+    margin: 0rem 1.8rem;
+  }
+  .nav-btn__txt {
+    margin-left: 2rem;
+  }
+}
 /* Card (Homepage/2nd section/deck) */
 .card {
   display: flex;
-  height: 37.9rem;
+  height: 26rem;
   width: 100%;
   box-shadow: 0rem 0.4rem 1.5rem #dfdfdf;
   border-radius: 2rem;
@@ -341,6 +408,11 @@ input[type=checkbox] {
   border-radius: 2rem;
 }
 
+@media screen and (min-width: 769px) {
+  .card {
+    height: 37.9rem;
+  }
+}
 /* Homepage Heart hover & checked */
 .heart-container {
   display: flex;
@@ -636,7 +708,7 @@ input[type=checkbox] {
 .header {
   display: flex;
   justify-content: center;
-  height: 9.4rem;
+  height: 7rem;
   box-shadow: 0rem 0.1rem 0.8rem #bdbdbd;
   position: relative;
 }
@@ -677,6 +749,10 @@ input[type=checkbox] {
 
 @media screen and (min-width: 769px) {
   /* Tablet mode */
+  .header {
+    height: 9.4rem;
+  }
+
   .footer {
     align-items: center;
     padding-left: 0rem;
@@ -938,27 +1014,48 @@ input[type=checkbox] {
   justify-content: center;
   align-items: center;
   background-color: #eaeaea;
-  height: 7.4rem;
+  height: 5.4rem;
 }
 .search-field__label {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   height: 100%;
-  width: 4rem;
   display: flex;
-  align-items: center;
+  position: relative;
+  top: 1.6rem;
+  left: -1rem;
 }
 .search-field__input {
   display: flex;
-  align-items: center;
-  margin-top: 1rem;
+  height: 2rem;
+  width: 13rem;
+  margin-top: 0.5rem;
 }
 .search-field__input--position {
   background-color: unset;
-  padding: 1rem 0rem 1rem 0.5rem;
-  width: 21rem;
   border: none;
 }
 
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .search-field {
+    height: 7.4rem;
+  }
+  .search-field__label {
+    font-size: 2.4rem;
+    top: 1.6rem;
+  }
+}
+@media screen and (min-width: 993px) {
+  .search-field {
+    height: 7.4rem;
+  }
+  .search-field__label {
+    font-size: 2.4rem;
+    top: 2.4rem;
+  }
+  .search-field__input {
+    width: 17rem;
+  }
+}
 /* (Homepage/1st section) Regroup-fields (Explore-field, Notice-field) */
 .regroup-fields {
   display: flex;
@@ -968,15 +1065,14 @@ input[type=checkbox] {
 /* (Homepage/1st section) Explore-field */
 .regroup-fields__explore-field {
   background-color: #f6f6f6;
-  height: 43.1rem;
+  height: 33rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .regroup-fields__explore-field__h3 {
-  display: inline-block;
-  margin: 6.8rem 0rem 0rem 3rem;
+  /* @include h3-config; */
   margin-top: 5.8rem;
   text-align: center;
   width: 68%;
@@ -985,7 +1081,7 @@ input[type=checkbox] {
   display: inline-block;
   text-align: center;
   margin-top: 2rem;
-  width: 80%;
+  width: 90%;
   color: #373737;
   font-weight: 300;
   text-shadow: 0rem 0.1rem 0.2rem #b1b1b1;
@@ -997,19 +1093,19 @@ input[type=checkbox] {
 
 /* (Homepage/1st section) Nav-field */
 .regroup-fields__nav-field {
-  height: 66rem;
+  height: 43rem;
   display: flex;
   flex-direction: column;
 }
 .regroup-fields__nav-field__h3 {
   display: inline-block;
-  margin: 6.8rem 0rem 0rem 3rem;
+  margin: 4rem 0rem 0rem 2rem;
 }
 .regroup-fields__nav-field__btn-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 4.4rem;
-  padding-left: 3.5rem;
   list-style-type: none;
 }
 
@@ -1017,24 +1113,24 @@ input[type=checkbox] {
 @media screen and (min-width: 769px) and (max-width: 992px) {
   .regroup-fields {
     flex-direction: row;
-    padding-right: 1.5rem;
   }
   .regroup-fields__explore-field {
-    height: 66rem;
     width: 50%;
     background-color: unset;
     justify-content: space-between;
   }
   .regroup-fields__explore-field__h3 {
-    margin-top: 6.8rem;
+    margin: 6.8rem 0rem 0rem 0rem;
   }
   .regroup-fields__explore-field__btn {
     margin-bottom: 12rem;
   }
   .regroup-fields__nav-field {
+    height: 66rem;
     width: 50%;
   }
   .regroup-fields__nav-field__h3 {
+    margin: 6.8rem 0rem 0rem 0rem;
     text-align: center;
   }
 }
@@ -1074,17 +1170,17 @@ input[type=checkbox] {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
-  height: 184rem;
+  height: 130rem;
 }
 .second-section__h3 {
   display: inline-block;
-  margin: 6.8rem 0rem 0rem 3rem;
+  margin: 4rem 0rem 0rem 2rem;
 }
 .second-section__article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4.5rem 3rem 0rem 3rem;
+  margin: 4.5rem 2rem 0rem 2rem;
 }
 .second-section__article__deck {
   display: flex;
@@ -1092,6 +1188,19 @@ input[type=checkbox] {
   position: relative;
 }
 
+/* (Homepage/1st section) Tablet mode */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .second-section {
+    height: 184rem;
+  }
+  .second-section__h3 {
+    display: inline-block;
+    margin: 4rem 0rem 0rem 3rem;
+  }
+  .second-section__article {
+    margin: 4.5rem 3rem 0rem 3rem;
+  }
+}
 /* (Homepage/2nd section) Desktop mode */
 @media screen and (min-width: 993px) {
   .second-section {
