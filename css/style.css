@@ -1,4 +1,4 @@
-@import "./vendors/normalize.css";
+@import "../sass/vendors/normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @media screen and (min-width: 993px) {
@@ -24,7 +24,7 @@ html {
     font-size: 40%;
   }
 }
-*, ::before, ::after {
+body, *, ::before, ::after {
   /* box-sizing applied to all elements */
   box-sizing: border-box;
   margin: 0;
@@ -61,7 +61,7 @@ h1 {
 h2 {
   /* Restaurants titles */
   font-family: "Shrikhand", "sans-serif";
-  font-size: 2.15rem;
+  font-size: 2rem;
   letter-spacing: 0.1rem;
 }
 
@@ -183,6 +183,7 @@ input::placeholder {
 }
 input[type=search] {
   cursor: pointer;
+  font-size: 2.4rem;
 }
 
 input[type=checkbox] {
@@ -570,7 +571,6 @@ input[type=checkbox] {
 .heart-menu {
   display: flex;
   position: relative;
-  top: 0.6rem;
   left: -1rem;
   cursor: pointer;
 }
@@ -858,9 +858,11 @@ input[type=checkbox] {
 /* Loader-section */
 .loader-section {
   display: flex;
-  flex-direction: column;
+  background-color: #373737;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+  width: 100%;
   -webkit-animation: loader-screen 6000ms cubic-bezier(0.28, 0.7, 0.41, 1.01) forwards;
   -moz-animation: loader-screen 6000ms cubic-bezier(0.28, 0.7, 0.41, 1.01) forwards;
   animation: loader-screen 6000ms cubic-bezier(0.28, 0.7, 0.41, 1.01) forwards;
@@ -875,7 +877,7 @@ input[type=checkbox] {
 }
 .loader-section__block__cookie {
   position: relative;
-  font-size: 10rem;
+  font-size: 6rem;
   margin: 0rem 1rem;
 }
 .loader-section__block__cookie__full {
@@ -945,6 +947,9 @@ input[type=checkbox] {
 }
 
 @keyframes loader-screen {
+  0% {
+    display: block;
+  }
   50% {
     visibility: visible;
     opacity: 1;
@@ -1047,13 +1052,13 @@ input[type=checkbox] {
 }
 .search-field__input {
   display: flex;
-  height: 2rem;
-  width: 13rem;
-  margin-top: 0.5rem;
+  height: 3rem;
 }
 .search-field__input--position {
   background-color: unset;
+  width: 15rem;
   border: none;
+  margin-left: 1.5rem;
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
@@ -1064,6 +1069,10 @@ input[type=checkbox] {
     font-size: 2.4rem;
     top: 1.6rem;
   }
+  .search-field__input--position {
+    width: 20rem;
+    padding-left: 2rem;
+  }
 }
 @media screen and (min-width: 993px) {
   .search-field {
@@ -1073,8 +1082,9 @@ input[type=checkbox] {
     font-size: 2.4rem;
     top: 2.4rem;
   }
-  .search-field__input {
-    width: 17rem;
+  .search-field__input--position {
+    width: 25rem;
+    padding-left: 3rem;
   }
 }
 /* (Homepage/1st section) Regroup-fields (Explore-field, Notice-field) */
@@ -1292,12 +1302,19 @@ input[type=checkbox] {
 }
 .aside__title {
   display: inline-block;
-  margin-left: 1rem;
+  margin: 0rem 0rem 4rem 1rem;
+  width: fit-content;
+  position: relative;
 }
-.aside__bar {
-  width: 6rem;
-  border-bottom: 0.4rem solid #99e2d0;
-  margin: 0.8rem 0rem 2.4rem 1rem;
+.aside__title::before {
+  content: "";
+  border-bottom: solid 0.3rem #99e2d0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -1rem;
+  left: 0;
+  width: 3rem;
 }
 .aside__list {
   display: flex;
@@ -1305,6 +1322,17 @@ input[type=checkbox] {
   list-style-type: none;
 }
 
+@media screen and (min-width: 769px) {
+  .aside__title::before {
+    border-bottom: solid 0.5rem #99e2d0;
+    width: 5rem;
+  }
+  .aside__list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+}
 /* Restaurant page thumbnail animations */
 /* Mobile & Tablet modes */
 @media screen and (max-width: 992px) {

@@ -5,9 +5,11 @@
 
 .loader-section {
     display: flex;
-    flex-direction: column;
+    background-color: #373737;
     justify-content: center;
+    align-items: center;
     height: 100vh;
+    width: 100%;
     -webkit-animation: loader-screen 6000ms cubic-bezier(.28,.7,.41,1.01) forwards;
     -moz-animation: loader-screen 6000ms cubic-bezier(.28,.7,.41,1.01) forwards;
     animation: loader-screen 6000ms cubic-bezier(.28,.7,.41,1.01) forwards;
@@ -20,7 +22,7 @@
 
         &__cookie {
             position: relative;
-            font-size: 10rem;
+            font-size: 6rem;
             margin: 0rem 1rem;
 
             &__full {
@@ -56,6 +58,9 @@
 }
 
 @keyframes loader-screen {
+    0% {
+        display: block;
+    }
     50% {
         visibility: visible;
         opacity: 1;
@@ -164,13 +169,13 @@
 
     &__input {
         display: flex;
-        height: 2rem;
-        width: 13rem;
-        margin-top: 0.5rem;
+        height: 3rem;
 
         &--position {
             background-color: unset;
+            width: 15rem;
             border: none;
+            margin-left: 1.5rem;
         }
     }
 }
@@ -183,6 +188,14 @@
         &__label {
             font-size: 2.4rem;
             top: 1.6rem;
+        }
+
+        &__input {
+    
+            &--position {
+                width: 20rem;
+                padding-left: 2rem;
+            }
         }
     }
 }
@@ -198,7 +211,11 @@
         }
 
         &__input {
-            width: 17rem;
+
+            &--position {
+                width: 25rem;
+                padding-left: 3rem;
+            }
         }
     }
 }

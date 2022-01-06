@@ -28,7 +28,7 @@ html {
     }
 }
 
-*, ::before, ::after { /* box-sizing applied to all elements */
+body, *, ::before, ::after { /* box-sizing applied to all elements */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -65,7 +65,7 @@ h1 { /* Logo title */
 
 h2 { /* Restaurants titles */
     font-family: $ft-shrik;
-    font-size: 2.15rem;
+    font-size: 2rem;
     letter-spacing: 0.1rem;
 }
 
@@ -193,6 +193,7 @@ input::placeholder {
 
 input[type="search"] {
     cursor:pointer;
+    font-size: 2.4rem;
 }
 
 input[type="checkbox"] {
